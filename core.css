@@ -1,0 +1,231 @@
+/* CSS Normalization */
+html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,[type="button"],[type="reset"],[type="submit"]{-webkit-appearance:button}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type="checkbox"],[type="radio"]{box-sizing:border-box;padding:0}[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto}[type="search"]{-webkit-appearance:textfield;outline-offset:-2px}[type="search"]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
+
+/* Fonts */
+/* Bitter */
+@font-face {
+    font-family: "Bitter";
+    src: url("./fonts/bitter/Bitter-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Bitter";
+    src: url("./fonts/bitter/Bitter-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Bitter";
+    src: url("./fonts/bitter/Bitter-Italic.ttf");
+    font-style: italic;
+}
+
+/* Lato */
+/* latin-ext */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjxAwXjeu.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjx4wXg.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Global */
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4 {
+    text-align: center;
+    font-family: 'Bitter', Palantio, Georgia, Times, serif;
+    margin-bottom: 0;
+}
+
+.bitter {
+    font-family: 'Bitter', Palantio, Georgia, Times, serif;
+}
+
+.line-seperator {
+    width: 100px;
+    height: 1px;
+    margin: 10px auto;
+    background-color: #fff;
+}
+
+.line-seperator-light {
+    width: 100px;
+    height: 1px;
+    margin: 10px auto;
+    background-color: #000
+}
+
+/* Header */
+
+header {
+    width: 100%;
+}
+
+#contact-info {
+    background-color: #3466b1;
+    color: #fff;
+    font-size: 0.9em;
+    padding: 5px 0;
+}
+
+#contact-info > div {
+    display: flex;
+    justify-content: space-around;
+    max-width: 800px;
+    margin: auto;
+}
+
+.contact-info-item > * + * {
+    margin-left: 10px;
+}
+
+nav {
+    font-family: 'Bitter', Palantio, Georgia, Times, serif;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px 0;
+    padding-left: 100px;
+}
+
+nav > div#logo {
+    width: 150px;
+}
+
+nav > div#logo > img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 40px;
+    max-width: 750px;
+    width: 100%;
+}
+
+nav ul > li {
+    display: inline-block;
+    list-style: none;
+}
+
+nav ul > li > a {
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.2s color;
+    font-weight: bold;
+}
+
+nav ul > li > a:hover {
+    color: #3466b1;
+}
+
+/* Splashscreen */
+
+#splashscreen {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background-size: cover;
+    background-image: url("./imgs/splashimage.png");
+    color: #fff;
+}
+
+#splashscreen > div {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+}
+
+#splashscreen > h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    max-width: 500px;
+    transform: translate(-50%, -50%);
+    font-size: 2.5em;
+}
+
+#splashscreen > a {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    font-size: 3em;
+    color: #fff;
+}
+
+/* About */
+
+#about {
+    display: flex;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.info-box-container {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+.info-box {
+    padding: 40px 20px;
+    border: 2px #ccc solid;
+    max-width: 300px;
+    width: 100%;
+    margin: 20px;
+}
+
+.info-box > i {
+    color: #3466b1;
+}
+
+.info-box > .line-seperator {
+    background-color: #3466b1;
+}
+
+.info-box > p {
+    color: #888;
+    text-align: center;
+}
+
+/* Why Choose Us */
+
+#wcu {
+    display: flex;
+    width: 100%;
+    height: 800px;
+    background-color: #ebebeb;
+}
+
+#wcu > * {
+    width: 50%;
+}
+
+#wcu-right {
+    background-color: #2d3c53;
+}
