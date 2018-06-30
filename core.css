@@ -44,12 +44,32 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}h1{font-size:2
 
 html {
     scroll-behavior: smooth;
+    font-family: 'Lato', Arial, Helvetica, sans-serif
 }
 
 h1, h2, h3, h4 {
     text-align: center;
     font-family: 'Bitter', Palantio, Georgia, Times, serif;
-    margin-bottom: 0;
+    margin: 0;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+.button {
+    display: inline-block;
+    color: #2769cc;
+    border: 2px #2769cc solid;
+    transition: 0.2s all;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background: #2769cc;
+    color: #fff;
 }
 
 .bitter {
@@ -99,8 +119,8 @@ nav {
     display: flex;
     align-items: center;
     background-color: #fff;
-    padding: 20px 0;
-    padding-left: 100px;
+    padding: 20px;
+    padding-left: 20%;
 }
 
 nav > div#logo {
@@ -146,9 +166,32 @@ nav ul > li > a:hover {
     height: 700px;
     background-size: cover;
     background-image: url("./imgs/splashimage.png");
+    background-position: center;
     color: #fff;
 }
 
+#splashscreen > div {
+    padding: 80px;
+}
+
+#splashscreen > div p {
+    color: #ccc;
+    line-height: 1.5em;
+    margin: 40px 0 0 0;
+}
+
+#splashscreen .button {
+    margin-top: 30px;
+}
+
+#splashscreen h2 {
+    font-size: 4em;
+    text-align: left;
+    line-height: 1.3em;
+    font-weight: normal;
+}
+
+/*
 #splashscreen > div {
     position: absolute;
     top: 100px;
@@ -176,32 +219,39 @@ nav ul > li > a:hover {
     font-size: 3em;
     color: #fff;
 }
-
+*/
 /* About */
 
 #about {
+    padding: 40px;
     display: flex;
-    height: 500px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
 .info-box-container {
-    margin: 10px;
+    margin: 10px 40px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    max-width: 1300px;
+    width: 100%;
 }
 .info-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     padding: 40px 20px;
     border: 2px #ccc solid;
     max-width: 300px;
     width: 100%;
-    margin: 20px;
+    margin: 30px 10px;
 }
 
 .info-box > i {
     color: #3466b1;
+    font-size: 4em;
+    margin-bottom: 20px;
 }
 
 .info-box > .line-seperator {
@@ -211,6 +261,7 @@ nav ul > li > a:hover {
 .info-box > p {
     color: #888;
     text-align: center;
+    line-height: 1.6em;
 }
 
 /* Why Choose Us */
@@ -227,5 +278,108 @@ nav ul > li > a:hover {
 }
 
 #wcu-right {
+    position: relative;
     background-color: #2d3c53;
+    padding: 20px;
+}
+
+#wcu-right::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url("imgs/wcu-bg.png");
+    background-size: cover;
+    opacity: 0.1;
+}
+
+#wcu-right > div {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 200px);
+    border: 2px #999 solid;
+    padding: 80px;
+    color: #fff;
+}
+
+#wcu-right > div > h2 {
+    font-size: 2.5em;
+    font-weight: normal;
+}
+
+.horizontal-info-box {
+    margin-left: 20px;
+    display: flex;
+}
+
+.horizontal-info-box + .horizontal-info-box {
+    margin-top: 40px;
+}
+
+.horizontal-info-box > i {
+    color: #ccc;
+    font-size: 3em;
+}
+
+.horizontal-info-box > div {
+    margin-left: 30px;
+}
+
+.horizontal-info-box > div > p, .horizontal-info-box > div > h4 {
+    text-align: left;
+}
+
+.horizontal-info-box > div > p {
+    color: #aaa;
+    max-width: 500px;
+}
+
+.horizontal-info-box h4 {
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+#wcu-quote {
+    max-width: 600px;
+    margin: 40px auto 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+#wcu-quote > i {
+    font-size: 3em;
+    color: #bbb
+}
+
+#wcu-quote > span {
+    color: #333;
+    font-size: 1.6em;
+    letter-spacing: 0.1em;
+    font-style: italic;
+    margin-left: 20px;
+}
+
+#wcu-left > p {
+    color: #999;
+    font-style: italic;
+    line-height: 1.7em;
+    font-size: 1.1em;
+    max-width: 600px;
+    margin: auto;
+}
+
+#wcu-left > .plyr {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#wcu-left {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px;
 }

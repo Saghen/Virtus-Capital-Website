@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Virtus Capital</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/plyr.css">
     <link rel="stylesheet" href="core.css">
+    <script src="js/plyr.min.js"></script>
 </head>
 
 <body>
@@ -53,30 +54,34 @@
     </header>
     <div id="splashscreen">
         <div>
-            <span class="bitter">Some Good Flashy Text</span>
-            <div class="line-seperator"></div>
+            <h2 class="title">A Focused Reliable Consistent Company
+                <br>Big Header That Goes Across Multiple
+                <br>Lines and Looks Fancy</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                <br>et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                <br>aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit</p>
+            <a href="#about" class="button">Learn More</a>
         </div>
-        <h2 class="title">Big Company Message On Multiple Lines</h2>
-        <a href="#"><i class="fas fa-angle-down"></i></a>
+        <!--<a href="#about"><i class="fas fa-angle-down"></i></a>-->
     </div>
     <div id="about">
         <h2>About Us</h2>
         <div class="line-seperator-light"></div>
         <div class="info-box-container">
             <div class="info-box">
-                <i class="fas"></i>
+                <i class="far fa-chart-bar"></i>
                 <h3>Market Research</h3>
                 <div class="line-seperator"></div>
                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
             </div>
             <div class="info-box">
-                <i class="fas"></i>
+                <i class="fas fa-chart-pie"></i>
                 <h3>Example Text Ja</h3>
                 <div class="line-seperator"></div>
                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
             <div class="info-box">
-                <i class="fas"></i>
+                <i class="fas fa-chart-area"></i>
                 <h3>Some More Text</h3>
                 <div class="line-seperator"></div>
                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -85,17 +90,49 @@
     </div>
     <div id="wcu">
         <div id="wcu-left">
-            <video>
-                <source src="video/feature.webm">
-                <source src="video/feature.mp4">
+            <video id="player">
+                <source src="video/feature.webm" type="video/webm">
+                <source src="video/feature.mp4" type="video/mp4">
             </video>
-            <div id="wcu-quote"></div>
+            <div id="wcu-quote">
+                <i class="fas fa-quote-left"></i>
+                <span class="bitter">A quick quote about the company that goes across two lines</span>
+            </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullam</p>
         </div>
         <div id="wcu-right">
-
+            <div>
+                <h2 style="text-align: left;">Why Choose Us</h2>
+                <div class="line-seperator" style="margin-left: 0; width: 260px; margin-bottom: 60px;"></div>
+                <div class="horizontal-info-box">
+                    <i class="fas fa-user-tie"></i>
+                    <div>
+                        <h4>More Flashy Text With Numbers</h4>
+                        <p>Does anyone know the nearest bridge it needs to be longer so that i can jump off of jajajajaja more lines it needs to be longer so because it needs more lines it needs to be longer so</p>
+                    </div>
+                </div>
+                <div class="horizontal-info-box">
+                    <i class="fas fa-building"></i>
+                    <div>
+                        <h4>More Flashy Text With Numbers</h4>
+                        <p>Does anyone know the nearest bridge it needs to be longer so that i can jump off of jajajajaja more lines it needs
+                            to be longer so because it needs more lines it needs to be longer so</p>
+                    </div>
+                </div>
+                <div class="horizontal-info-box">
+                    <i class="fas fa-briefcase"></i>
+                    <div>
+                        <h4>More Flashy Text With Numbers</h4>
+                        <p>Does anyone know the nearest bridge it needs to be longer so that i can jump off of jajajajaja more lines it needs
+                            to be longer so because it needs more lines it needs to be longer so</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <script>
+        const player = new Plyr('#player');
+    </script>
 </body>
 
 </html>
