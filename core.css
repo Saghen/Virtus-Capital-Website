@@ -256,6 +256,7 @@ h2 {
     padding: 10px 20px;
     border-radius: 10px;
     text-decoration: none;
+    white-space: nowrap;
 }
 
 .bitter {
@@ -283,6 +284,7 @@ header {
     z-index: 100;
     width: 100%;
     transition: 0.2s all;
+    text-shadow: 1px 1px rgba(0,0,0,0.6);
 }
 
 #contact-info {
@@ -347,6 +349,7 @@ nav ul>li>a:hover {
 .scrolled-header {
     background-color: #fff;
     box-shadow: 0 0 10px 0 #aaa;
+    text-shadow: none;
 }
 
 .scrolled-header>nav>ul>li>a {
@@ -355,6 +358,14 @@ nav ul>li>a:hover {
 
 .scrolled-header>nav>div>a {
     color: #3b89ff;
+}
+
+.scrolled-header #logo-capital {
+    color: #000;
+}
+
+.scrolled-header img {
+    filter: none !important;
 }
 
 /* Splashscreen */
@@ -368,7 +379,7 @@ nav ul>li>a:hover {
     color: #fff;
     background-color: #333;
     background-size: cover;
-    background-image: url("./imgs/4.jpg");
+    background-image: url("./imgs/FullSizeRender.jpg    ");
     background-position: 50% 30%;
     transform: translateZ(-1px) scale(1.5) translateX(-3px);
     z-index: -1;
