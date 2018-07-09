@@ -399,6 +399,16 @@ nav ul>li>a:hover {
     font-weight: normal;
 }
 
+#splashscreen-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
 /*
 #splashscreen > div {
     position: absolute;

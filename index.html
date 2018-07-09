@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="css/plyr.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" href="core.css">
+    <link rel="stylesheet" href="css/aos.css">
     <script src="js/plyr.min.js"></script>
+    <script src="js/bideo.min.js"></script>
+    <script src="js/aos.js"></script>
 </head>
 
 <body>
@@ -66,12 +69,11 @@
                 <a href="#about" class="button">Learn More</a>
             </div>
         </div>
-        <!--<a href="#about"><i class="fas fa-angle-down"></i></a>-->
         <div id="about">
             <h2>About Us</h2>
             <div class="line-seperator-light"></div>
             <div class="info-box-container">
-                <div class="info-box">
+                <div class="info-box" data-aos="fade-down">
                     <i class="far fa-chart-bar"></i>
                     <h3>Market Research</h3>
                     <div class="line-seperator"></div>
@@ -79,7 +81,7 @@
                         dolore magna aliqua.Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua. </p>
                 </div>
-                <div class="info-box">
+                <div class="info-box" data-aos="fade-down">
                     <i class="fas fa-chart-pie"></i>
                     <h3>Example Text Ja</h3>
                     <div class="line-seperator"></div>
@@ -87,7 +89,7 @@
                         dolore magna aliqua.Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua.</p>
                 </div>
-                <div class="info-box">
+                <div class="info-box" data-aos="fade-down">
                     <i class="fas fa-chart-area"></i>
                     <h3>Some More Text</h3>
                     <div class="line-seperator"></div>
@@ -100,42 +102,46 @@
         <div id="wcu">
             <div id="wcu-left">
                 <video id="player">
-                    <source src="video/feature.webm" type="video/webm">
-                    <source src="video/feature.mp4" type="video/mp4">
+                    <source src="drone.mp4" type="video/mp4">
                 </video>
-                <div id="wcu-quote">
+                <div id="wcu-quote" data-aos="fade-right">
                     <i class="fas fa-quote-left"></i>
                     <span class="bitter">A quick quote about the company that goes across two lines</span>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore
+                <p data-aos="fade-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore
                     magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullam</p>
             </div>
             <div id="wcu-right">
                 <div>
                     <h2 style="text-align: left;">Why Choose Us</h2>
                     <div class="line-seperator" style="margin-left: 0; width: 260px; margin-bottom: 60px;"></div>
-                    <div class="horizontal-info-box">
-                        <i class="fas fa-user-tie"></i>
-                        <div>
-                            <h4>More Flashy Text With Numbers</h4>
-                            <p>Does anyone know the nearest bridge it needs to be longer so that i can jump off of jajajajaja
-                                more lines it needs to be longer so because it needs more lines it needs to be longer so</p>
+                    <div data-aos="fade-left">
+                        <div class="horizontal-info-box">
+                            <i class="fas fa-user-tie"></i>
+                            <div>
+                                <h4>More Flashy Text With Numbers</h4>
+                                <p>Does anyone know the nearest bridge it needs to be longer so that i can jump off of jajajajaja
+                                    more lines it needs to be longer so because it needs more lines it needs to be longer
+                                    so</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="horizontal-info-box">
-                        <i class="fas fa-building"></i>
-                        <div>
-                            <h4>More Flashy Text With Numbers</h4>
-                            <p>Does anyone know the nearest bridge it needs to be longer so that i can jump off of jajajajaja
-                                more lines it needs to be longer so because it needs more lines it needs to be longer so</p>
+                        <div class="horizontal-info-box">
+                            <i class="fas fa-building"></i>
+                            <div>
+                                <h4>More Flashy Text With Numbers</h4>
+                                <p>Does anyone know the nearest bridge it needs to be longer so that i can jump off of jajajajaja
+                                    more lines it needs to be longer so because it needs more lines it needs to be longer
+                                    so</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="horizontal-info-box">
-                        <i class="fas fa-briefcase"></i>
-                        <div>
-                            <h4>More Flashy Text With Numbers</h4>
-                            <p>Does anyone know the nearest bridge it needs to be longer so that i can jump off of jajajajaja
-                                more lines it needs to be longer so because it needs more lines it needs to be longer so</p>
+                        <div class="horizontal-info-box">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <h4>More Flashy Text With Numbers</h4>
+                                <p>Does anyone know the nearest bridge it needs to be longer so that i can jump off of jajajajaja
+                                    more lines it needs to be longer so because it needs more lines it needs to be longer
+                                    so</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -155,7 +161,50 @@
                 document.querySelector('#header').classList.remove('scrolled-header');
             }
         })
+
+        AOS.init({
+            offset: 0,
+            duration: 500,
+            easing: 'ease-in-out',
+            delay: 50,
+
+        });
     </script>
+    <!--<script>
+            (function () {
+
+                var bv = new Bideo();
+                bv.init({
+                    // Video element
+                    videoEl: document.querySelector('#splashscreen-video'),
+
+                    // Container element
+                    container: document.querySelector('#splashscreen'),
+
+                    // Resize
+                    resize: true,
+
+                    autoplay: true,
+
+                    isMobile: window.matchMedia('(max-width: 768px)').matches,
+
+                    // Array of objects containing the src and type
+                    // of different video formats to add
+                    src: [
+                        {
+                            src: 'drone.mp4',
+                            type: 'video/mp4'
+                        }
+                    ],
+
+                    // What to do once video loads (initial frame)
+                    onLoad: function () {
+                        document.querySelector('#video_cover').style.display = 'none';
+                    }
+                });
+            }());
+
+    </script>-->
 </body>
 
 </html>
