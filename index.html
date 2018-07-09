@@ -165,6 +165,8 @@
             </div>
             <div id="accordions">
                 <div class="accordion">
+                    <h3>Daniel McClure</h3>
+                    <div class="line-seperator-light"></div>
                     <p>Dan is a financial industry veteran, having spent 20 years in the capital markets. He has worked in a
                         variety of positions starting with investment banking, then progressing into leadership roles in
                         investment research, portfolio management, business development, and as the CEO & CIO of an alternative
@@ -176,6 +178,8 @@
                         from the Ivey School of Business.​</p>
                 </div>
                 <div class="accordion">
+                    <h3>Charles Dyer</h3>
+                    <div class="line-seperator-light"></div>
                     <p>A lifelong real estate professional, Charles began his career as a project engineer, gaining valuable
                         experience in the design and project management of large municipal infrastructure projects. In 1995,
                         he became Director of Store Planning for Shoppers Drug Mart and managed the conversion of 135 Big
@@ -189,6 +193,8 @@
                         his Master of Business Administration from the DeGroote School of Business, McMaster University.​</p>
                 </div>
                 <div class="accordion">
+                    <h3>Roger Ferraria</h3>
+                    <div class="line-seperator-light"></div>
                     <p>Roger Ferreira, is the CEO and founder of NAGC, one of the leading general contractors in the retail
                         real estate industry. With over 500 successful projects since 1998, his expertise ranges from Quick
                         Service Restaurants, Pharmacy Retailers, Grocers, Medical Offices, Gas Stations, and Municipal Projects.
@@ -300,7 +306,7 @@
 
         function toggleAccordion(id) {
             let elem = document.getElementsByClassName('accordion')[id];
-            if(elem.classList.contains('accordion-expanded')) {
+            if (elem.classList.contains('accordion-expanded')) {
                 elem.style.maxHeight = '0px';
                 elem.style.padding = '0px 40px';
                 setTimeout(() => elem.classList.remove('accordion-expanded'), 400);
@@ -308,10 +314,18 @@
             }
 
             for (let item of document.getElementsByClassName('accordion')) {
-                item.classList.remove('accordion-expanded');
-                item.style.maxHeight = 0;
+                if (item.classList.contains('accordion-expanded')) {
+                    item.style.maxHeight = '0px';
+                    item.style.padding = '0px 40px';
+                    setTimeout(() => {
+                        item.classList.remove('accordion-expanded');
+                        elem.classList.add('accordion-expanded');
+                        elem.style.maxHeight = elem.scrollHeight + "px";
+                        elem.style.padding = '40px';
+                    }, 500);
+                    return;
+                }
             }
-            
 
             elem.classList.add('accordion-expanded');
             elem.style.maxHeight = elem.scrollHeight + "px";
