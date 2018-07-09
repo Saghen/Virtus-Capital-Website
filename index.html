@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="core.css">
     <link rel="stylesheet" href="css/aos.css">
     <script src="js/plyr.min.js"></script>
-    <script src="js/bideo.min.js"></script>
     <script src="js/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 
 <body>
@@ -48,7 +48,7 @@
                     <a href="#about">About</a>
                 </li>
                 <li>
-                    <a href="#">Team</a>
+                    <a href="#meet-the-team">Team</a>
                 </li>
                 <li>
                     <a href="#">Properties & Leasing</a>
@@ -121,8 +121,8 @@
                             <div>
                                 <h4>More Flashy Text With Numbers</h4>
                                 <p>Does anyone know the nearest bridge it needs to be longer so that i can jump off of jajajajaja
-                                    more lines it needs to be longer so because it needs more lines it needs to be longer
-                                    so</p>
+                                    more lines it needs to be longer so because
+                                </p>
                             </div>
                         </div>
                         <div class="horizontal-info-box">
@@ -130,8 +130,8 @@
                             <div>
                                 <h4>More Flashy Text With Numbers</h4>
                                 <p>Does anyone know the nearest bridge it needs to be longer so that i can jump off of jajajajaja
-                                    more lines it needs to be longer so because it needs more lines it needs to be longer
-                                    so</p>
+                                    more lines it needs to be longer so because
+                                </p>
                             </div>
                         </div>
                         <div class="horizontal-info-box">
@@ -139,13 +139,110 @@
                             <div>
                                 <h4>More Flashy Text With Numbers</h4>
                                 <p>Does anyone know the nearest bridge it needs to be longer so that i can jump off of jajajajaja
-                                    more lines it needs to be longer so because it needs more lines it needs to be longer
-                                    so</p>
+                                    more lines it needs to be longer so because
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div id="meet-the-team">
+            <h2>Meet the Team</h2>
+            <div class="line-seperator-light"></div>
+            <div id="team-members" data-aos="fade-down">
+                <div class="team-member" style="background-image: url(imgs/mtt-daniel.jpg)">
+                    <div class="team-member-info">
+                        <span>Daniel McClure</span>
+                        <div class="line-seperator"></div>
+                        <span>Executive Chairman</span>
+                    </div>
+                </div>
+                <div class="team-member" style="background-image: url(imgs/mtt-charles.jpg)">
+                    <div class="team-member-info">
+                        <span>Charles Dyer</span>
+                        <div class="line-seperator"></div>
+                        <span>CEO & Founder</span>
+                    </div>
+                </div>
+                <div class="team-member" style="background-image: url(imgs/mtt-roger.jpg)">
+                    <div class="team-member-info">
+                        <span>Roger Ferraria</span>
+                        <div class="line-seperator"></div>
+                        <span>CDO & Founder</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="news">
+            <h2>Recent News</h2>
+            <div class="line-seperator-light"></div>
+            <div id="news-container">
+                <div v-for="item in news">
+                    <a :href="item.link" class="news-item">
+                        <img :src="item.img" style="width: 320px; height: 180px; object-fit: cover; background-color: #ccc;">
+                        <h3>{{ item.title }}</h3>
+                        <div>
+                            <span>{{ item.date }}</span>
+                            <span>BY <span style="color: #173f7a;">{{ item.author }}</span></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <script>
+                let app = new Vue({
+                    el: '#news-container',
+                    data: {
+                        news: [
+                            {
+                                title: 'This is the title of the news article that was written',
+                                date: 'june 18, 2018',
+                                author: 'Liam',
+                                img: 'http://cdn1-www.dogtime.com/assets/uploads/gallery/samoyed-dogs-and-puppies/samoyed-dogs-puppies-1.jpg',
+                                link: '#'
+                            },
+                            {
+                                title: 'This is the title of the news article that was written',
+                                date: 'june 18, 2018',
+                                author: 'Liam'
+                            },
+                            {
+                                title: 'This is the title of the news article that was written',
+                                date: 'june 18, 2018',
+                                author: 'Liam'
+                            },
+                            {
+                                title: 'This is the title of the news article that was written',
+                                date: 'june 18, 2018',
+                                author: 'Liam'
+                            },
+                            {
+                                title: 'This is the title of the news article that was written',
+                                date: 'june 18, 2018',
+                                author: 'Liam'
+                            },
+                            {
+                                title: 'This is the title of the news article that was written',
+                                date: 'june 18, 2018',
+                                author: 'Liam'
+                            },
+                            {
+                                title: 'This is the title of the news article that was written',
+                                date: 'june 18, 2018',
+                                author: 'Liam'
+                            },
+                            {
+                                title: 'This is the title of the news article that was written',
+                                date: 'june 18, 2018',
+                                author: 'Liam'
+                            }
+                        ]
+                    },
+                    created() {
+                        // For use when deployed
+                    }
+                })
+            </script>
         </div>
     </div>
     <script>
@@ -167,7 +264,7 @@
             duration: 500,
             easing: 'ease-in-out',
             delay: 50,
-
+            once: true
         });
     </script>
     <!--<script>
