@@ -377,11 +377,21 @@ nav ul>li>a:hover {
     position: relative;
     height: 100vh;
     color: #fff;
+    transform: translateZ(-1px) scale(1.5) translateX(-3px);
+    z-index: -1;
+}
+
+#splashscreen::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background-color: #333;
     background-size: cover;
-    background-image: url("./imgs/FullSizeRender.jpg    ");
-    background-position: 50% 30%;
-    transform: translateZ(-1px) scale(1.5) translateX(-3px);
+    background-image: url("./imgs/FullSizeRender.jpg");
+    background-position: center;
     z-index: -1;
 }
 
