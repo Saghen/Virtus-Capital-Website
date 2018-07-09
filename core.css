@@ -223,6 +223,7 @@ template {
 
 html {
     font-family: 'Raleway', 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
 }
 
 #container {
@@ -635,6 +636,25 @@ nav ul>li>a:hover {
     bottom: 0;
     transform: translate(-50%, 50%);
     padding: 10px 0;
+}
+
+/* Accordions */
+
+#accordions {
+    margin-top: 20px;
+}
+
+.accordion {
+    background-color: #ededed;
+    transition: 0.4s;
+    display: none;
+    max-height: 1px;
+    padding: 40px;
+    overflow: hidden;
+}
+
+.accordion-expanded {
+    display: block;
 }
 
 /* News */

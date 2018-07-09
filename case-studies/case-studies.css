@@ -1,0 +1,82 @@
+#case-study-picker {
+    position: relative;
+    height: 400px;
+    background-image: url(../imgs/FullSizeRender.jpg);
+    background-size: cover;
+    color: #fff;
+}
+
+#case-study-picker > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#case-study-picker > div > * + * {
+    margin-top: 20px;
+}
+
+#case-study-picker .button + .button {
+    margin-left: 20px;
+}
+
+/* Case study */
+
+.case-study {
+    padding: 20px 15% 40px 15%;
+}
+
+.case-study:nth-child(2n) {
+    background-color: #ededed;
+}
+
+.case-study h2 {
+    margin-top: 30px;
+}
+
+.case-study h3, .case-study h4 {
+    text-align: left;
+    color: #3b89ff;
+}
+
+.case-study img {
+    object-fit: cover;
+    width: 400px;
+    height: 225px;
+}
+
+.case-study span {
+    display: block;
+}
+
+.case-study-imgs {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.case-study-imgs > div {
+    border-top: 1px solid #000;
+    display: flex;
+    padding: 20px
+}
+
+.case-study-imgs > div > * + * {
+    margin-left: 20px;
+}
+
+.case-study-imgs > * + * {
+    border-bottom: 1px solid #000;
+}
+
+/* dah BIG FAXTS fam */
+
+.case-study-big-facts {
+    display: flex;
+    justify-content: space-between;
+}
+
+.case-study-big-facts > div > * + * {
+    margin-top: 10px;
+}
