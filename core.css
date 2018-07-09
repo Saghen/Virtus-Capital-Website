@@ -650,6 +650,7 @@ nav ul>li>a:hover {
     max-height: 0px;
     padding: 0 40px;
     overflow: hidden;
+    line-height: 1.4em;
 }
 
 .accordion-expanded {
