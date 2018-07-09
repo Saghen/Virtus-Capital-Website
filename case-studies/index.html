@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <header id="header">
+    <header id="header" class="scrolled-header">
         <nav>
             <div id="logo">
                 <a href="#" style="text-decoration: none;">
@@ -39,7 +39,7 @@
     </header>
     <div id="case-study-picker">
         <div>
-            <h1>Case Studies</h1>
+            <h1 style="text-shadow: 2px 2px rgba(0,0,0,0.3);">Case Studies</h1>
             <div>
                 <a href="#queenston-road" class="button">685 Queenston Road</a>
                 <a href="#high-street" class="button">4 High Street</a>
@@ -180,15 +180,5 @@
         </div>
     </div>
 </body>
-<script>
-    window.addEventListener('scroll', (e) => {
-        if (window.pageYOffset > 0) {
-            document.querySelector('#header').classList.add('scrolled-header');
-        }
-        else {
-            document.querySelector('#header').classList.remove('scrolled-header');
-        }
-    })
-</script>
 
 </html>
