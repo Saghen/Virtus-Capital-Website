@@ -110,3 +110,33 @@ h1, h2, h3, h4 {
 .case-study-big-facts > div > * + * {
     margin-top: 10px;
 }
+
+@media only screen and (max-width: 1000px) {
+    .case-study img {
+        width: 300px;
+        height: 169px;
+        margin-bottom: 20px;
+    }
+
+    .case-study-imgs > div {
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .case-study-big-facts {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .case-study h3, .case-study h4 {
+        text-align: center;
+    }
+
+    .case-study-big-facts > * + * {
+        margin: 20px 0 0 0;
+        padding: 0;
+    }
+}

@@ -278,20 +278,30 @@
     </div>
     <script>
         const player = new Plyr('#player', {
-            loop: { active: true },
-            autoplay: true
+            loop: { active: true }
         });
 
-        /*let container = document.getElementById('container');
+        let container = document.getElementById('container');
+        let el = document.getElementById('player');
+        let elTop = el.getBoundingClientRect().top;
+        let windowHeight = window.innerHeight;
+
+        window.addEventListener('resize', () => {
+            el = document.getElementById('player');
+            elTop = el.getBoundingClientRect().top;
+            windowHeight = window.innerHeight;
+        })
 
         container.addEventListener('scroll', (e) => {
-            if (container.scrollTop > 0) {
-                document.querySelector('#header').classList.add('scrolled-header');
+            if (container.scrollTop > elTop - windowHeight && container.scrollTop < el.scrollHeight + elTop + windowHeight) {
+                if (!player.playing) player.play();
             }
             else {
-                document.querySelector('#header').classList.remove('scrolled-header');
+                if (player.playing) {
+                    player.pause();
+                }
             }
-        })*/
+        })
 
         AOS.init({
             offset: 0,

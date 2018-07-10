@@ -282,9 +282,8 @@ h2 {
 header {
     position: fixed;
     z-index: 100;
-    width: 100%;
+    width: 100vw;
     transition: 0.2s all;
-    text-shadow: 1px 1px rgba(0,0,0,0.6);
     top: 0;
 }
 
@@ -350,7 +349,6 @@ nav ul>li>a:hover {
 .scrolled-header {
     background-color: #fff;
     box-shadow: 0 0 10px 0 #aaa;
-    text-shadow: none;
 }
 
 .scrolled-header>nav>ul>li>a {
@@ -688,6 +686,13 @@ nav ul>li>a:hover {
 
 /* Responsiveeeee */
 
+@media only screen and (max-width: 1400px) {
+    #wcu-right > div {
+        padding: 40px;
+        height: calc(100% - 120px);
+    }
+}
+
 @media only screen and (max-width: 1000px) {
     #wcu {
         flex-direction: column;
@@ -725,6 +730,7 @@ nav ul>li>a:hover {
 
     nav > ul {
         margin-left: 0;
+        padding: 0 10px;
     }
 
     nav {
@@ -735,11 +741,22 @@ nav ul>li>a:hover {
         flex-direction: column;
         align-items: center;
     }
-}
 
-@media only screen and (max-width: 1400px) {
     #wcu-right > div {
         padding: 40px;
-        height: calc(100% - 120px);
+        height: auto;
+    }
+
+    #splashscreen > div > p {
+        display: none;
+    }
+
+    #splashscreen > div > h2 {
+        margin-bottom: 20px;
+        font-size: 3em;
+    }
+
+    #logo > a > img {
+        display: none;
     }
 }
