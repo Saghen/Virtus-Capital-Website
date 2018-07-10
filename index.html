@@ -61,7 +61,7 @@
                     <h4>Capital to be Raised</h4>
                 </div>
                 <div class="info-box" data-aos="fade-down">
-                    <i class="fas fa-money-bill-alt"></i>
+                    <i class="fas fa-dollar-sign"></i>
                     <h3>6%</h3>
                     <h4>Annual Cash Distribution</h4>
                 </div>
@@ -74,14 +74,14 @@
         </div>
         <div id="wcu">
             <div id="wcu-left">
-                <video id="player">
+                <video id="player" muted>
                     <source src="drone.mp4" type="video/mp4">
                 </video>
                 <div id="wcu-quote" data-aos="fade-right">
                     <i class="fas fa-quote-left"></i>
-                    <span class="bitter">Adding value through repositioning of underperforming retail assets</span>
+                    <span class="bitter">Adding value through repositioning of under-performing retail assets</span>
                 </div>
-                <p data-aos="fade-right">The Virtus Capital fund I will focus on purchasing and repositioning underperforming retail assets by adding value through a combination of increased rental rates, filling vacancy, and developing excess land</p>
+                <p data-aos="fade-right">The Virtus Capital fund will focus on purchasing and repositioning underperforming retail assets by adding value through a combination of increased rental rates, filling vacancy, and developing excess land</p>
             </div>
             <div id="wcu-right">
                 <div>
@@ -275,7 +275,10 @@
         </div>
     </div>
     <script>
-        const player = new Plyr('#player');
+        const player = new Plyr('#player', {
+            loop: { active: true },
+            autoplay: true
+        });
 
         /*let container = document.getElementById('container');
 
