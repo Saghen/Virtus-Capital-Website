@@ -251,7 +251,7 @@ h2 {
 .button {
     display: inline-block;
     color: #fff;
-    background: #3466b1;
+    background: #3b89ff;
     transition: 0.2s all;
     padding: 10px 20px;
     border-radius: 10px;
@@ -365,6 +365,22 @@ nav ul>li>a:hover {
 
 .scrolled-header img {
     filter: none !important;
+}
+
+#hi {
+    color: #3274d8;
+}
+
+#contact {
+    background: #2e3e56;
+    display: flex;
+    justify-content: center;
+    padding: 5px 10px;
+    color: #fff;
+}
+
+#contact > * {
+    padding: 0 20px;
 }
 
 /* Splashscreen */
@@ -735,6 +751,10 @@ nav ul>li>a:hover {
 
     nav {
         padding: 10px;
+    }
+
+    #contact > *:nth-child(1) {
+        display: none;
     }
 
     .info-box-container {
