@@ -17,12 +17,12 @@
 </head>
 
 <body>
-    <header id="header">
+    <header id="header" class="scrolled-header">
         <nav>
             <div id="logo">
                 <a href="#splashscreen" style="text-decoration: none;">
-                    <span class="bitter" style="font-size: 1.3em; font-weight: normal;">VIRTUS <span id="logo-capital">CAPITAL</span></span>
-                    <!--<img src="imgs/logo.png" style="transition: 0.2s; width: 150px; filter: invert(100%) hue-rotate(180deg);">-->
+                    <!--<span class="bitter" style="font-size: 1.3em; font-weight: normal;">VIRTUS <span id="logo-capital">CAPITAL</span></span>-->
+                    <img src="imgs/logo.png" style="transition: 0.2s; width: 150px; filter: invert(100%) hue-rotate(180deg);">
                 </a>
             </div>
             <ul>
@@ -284,7 +284,7 @@
     <script>
         const player = new Plyr('#player');
 
-        let container = document.getElementById('container');
+        /*let container = document.getElementById('container');
 
         container.addEventListener('scroll', (e) => {
             if (container.scrollTop > 0) {
@@ -293,7 +293,7 @@
             else {
                 document.querySelector('#header').classList.remove('scrolled-header');
             }
-        })
+        })*/
 
         AOS.init({
             offset: 0,
