@@ -328,6 +328,8 @@
                 return;
             }
 
+            if(window.innerHeight < 1000) location.hash = '#roger';
+
             for (let item of document.getElementsByClassName('accordion')) {
                 if (item.classList.contains('accordion-expanded')) {
                     item.style.maxHeight = '0px';

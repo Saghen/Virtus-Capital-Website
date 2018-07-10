@@ -283,7 +283,6 @@ header {
     position: fixed;
     z-index: 100;
     width: 100vw;
-    transition: 0.2s all;
     top: 0;
 }
 
