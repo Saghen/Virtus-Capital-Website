@@ -285,6 +285,7 @@ header {
     width: 100%;
     transition: 0.2s all;
     text-shadow: 1px 1px rgba(0,0,0,0.6);
+    top: 0;
 }
 
 #contact-info {
@@ -421,49 +422,10 @@ nav ul>li>a:hover {
     font-weight: normal;
 }
 
-#splashscreen-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-}
-
-/*
-#splashscreen > div {
-    position: absolute;
-    top: 100px;
-    left: 50%;
-    text-align: center;
-    transform: translateX(-50%);
-}
-
-#splashscreen > h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    text-align: center;
-    max-width: 500px;
-    transform: translate(-50%, -50%);
-    font-size: 2.5em;
-}
-
-#splashscreen > a {
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    text-align: center;
-    transform: translateX(-50%);
-    font-size: 3em;
-    color: #fff;
-}
-*/
-
 /* About */
 
 #about, #meet-the-team {
+    position: relative;
     padding: 40px;
     display: flex;
     align-items: center;
@@ -473,7 +435,7 @@ nav ul>li>a:hover {
 }
 
 .info-box-container {
-    margin: 10px 40px;
+    margin: 0 40px;
     display: flex;
     justify-content: space-around;
     max-width: 1300px;
@@ -484,27 +446,33 @@ nav ul>li>a:hover {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 40px 20px;
-    border: 2px #ccc solid;
+    padding: 0 20px;
     max-width: 300px;
     width: 100%;
     margin: 30px 10px;
 }
 
 .info-box>i {
-    color: #3466b1;
-    font-size: 4em;
+    color: #3b89ff;
+    font-size: 5em;
     margin-bottom: 20px;
-}
-
-.info-box>.line-seperator {
-    background-color: #3466b1;
 }
 
 .info-box>p {
     color: #888;
     text-align: center;
     line-height: 1.6em;
+}
+
+.info-box h3 {
+    font-size: 4em;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.info-box h4 {
+    font-size: 1.2em;
+    color: #000;
 }
 
 /* Why Choose Us */
