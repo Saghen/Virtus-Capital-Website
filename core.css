@@ -709,22 +709,37 @@ nav ul>li>a:hover {
         min-height: 800px;
         padding: 40px;
     }
+
+    #team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #team-members > * + * {
+        margin-top: 80px;
+    }
+
+    nav > ul > li:nth-child(2), nav > ul > li:nth-child(3) {
+        display: none;
+    }
+
+    nav > ul {
+        margin-left: 0;
+    }
+
+    nav {
+        padding: 10px;
+    }
+
+    .info-box-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media only screen and (max-width: 1400px) {
     #wcu-right > div {
         padding: 40px;
         height: calc(100% - 120px);
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    #team-members {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .team-member + .team-member {
-        margin-top: 60px;
     }
 }
