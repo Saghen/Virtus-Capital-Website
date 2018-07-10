@@ -426,7 +426,7 @@ nav ul>li>a:hover {
 
 #about, #meet-the-team {
     position: relative;
-    padding: 40px;
+    padding: 20px 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -446,10 +446,11 @@ nav ul>li>a:hover {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 0 20px;
+    padding: 40px 20px;
     max-width: 300px;
     width: 100%;
     margin: 30px 10px;
+    border: 2px #aaa solid;
 }
 
 .info-box>i {
