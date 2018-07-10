@@ -385,9 +385,6 @@ nav ul>li>a:hover {
 /* Splashscreen */
 
 #splashscreen {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
     height: 100vh;
     color: #fff;
@@ -410,11 +407,11 @@ nav ul>li>a:hover {
 }
 
 #splashscreen>div {
+    transform: translate(60px, 180px);
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    max-width: 1200px;
     /*padding: 40px;
     background: rgba(0,0,0,0.4);
     border-radius: 20px;*/
@@ -433,6 +430,10 @@ nav ul>li>a:hover {
     font-size: 4em;
     line-height: 1.3em;
     font-weight: normal;
+}
+
+#splashscreen .button {
+    margin: 20px auto 0 auto;
 }
 
 /* About */
