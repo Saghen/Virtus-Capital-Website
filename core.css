@@ -355,6 +355,9 @@ nav ul>li>a:hover {
 /* Splashscreen */
 
 #splashscreen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     height: 100vh;
     color: #fff;
@@ -377,7 +380,6 @@ nav ul>li>a:hover {
 }
 
 #splashscreen>div {
-    transform: translate(30px, 120px);
     max-width: 1200px;
     display: flex;
     flex-direction: column;
@@ -492,13 +494,28 @@ nav ul>li>a:hover {
     opacity: 0.1;
 }
 
-#wcu-right>div {
+#wcu-right>div:nth-child(1) {
     display: flex;
     flex-direction: column;
-    height: calc(100% - 200px);
-    border: 2px #999 solid;
+    min-height: 680px;
     padding: 80px;
     color: #fff;
+}
+
+#wcu-right>div:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px #999 solid;
+    margin: 20px;
+}
+
+@media only screen and (max-width: 1400px) {
+    #wcu-right>div {
+        padding: 20px;
+    }
 }
 
 #wcu-right>div>h2 {
@@ -565,7 +582,7 @@ nav ul>li>a:hover {
     line-height: 1.7em;
     font-size: 1.1em;
     max-width: 600px;
-    margin: auto;
+    margin-top: 40px;
 }
 
 #wcu-left>.plyr {
@@ -582,15 +599,14 @@ nav ul>li>a:hover {
 
 /* Meet the team */
 
-#team-members {
+.info-box-container-alt {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    max-width: 1200px;
-    margin: 40px 0;
+    margin: 40px auto;
 }
 
-.team-member {
+.info-box-alt {
     position: relative;
     width: 300px;
     height: 380px;
@@ -599,7 +615,12 @@ nav ul>li>a:hover {
     background-position: center;
 }
 
-.team-member-info {
+.info-box-alt-wide {
+    width: 400px;
+    height: 225px;
+}
+
+.info-box-alt-info {
     position: absolute;
     width: 200px;
     background-color: #2e3e56;
@@ -608,22 +629,27 @@ nav ul>li>a:hover {
     left: 50%;
     bottom: 0;
     transform: translate(-50%, 50%);
-    padding: 10px 0;
+    padding: 10px;
 }
 
 /* Accordions */
 
-#accordions {
-    margin-top: 20px;
+.accordion-container {
+    margin-top: 40px;
 }
 
 .accordion {
     background-color: #ededed;
     transition: 0.4s ease-in-out;
     max-height: 0px;
+    max-width: 1000px;
     padding: 0 40px;
     overflow: hidden;
     line-height: 1.4em;
+}
+
+.accordion-light {
+    background-color: #fff;
 }
 
 .accordion-expanded {
@@ -635,6 +661,10 @@ nav ul>li>a:hover {
 #case-studies {
     padding: 40px;
     background-color: #ebebeb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 #case-study-accordions {
@@ -776,6 +806,7 @@ nav ul>li>a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    max-width: 1400px;
 }
 
 .news-item {
@@ -839,14 +870,15 @@ nav ul>li>a:hover {
 
 /* Responsiveeeee */
 
-@media only screen and (max-width: 1400px) {
-    #wcu-right>div {
-        padding: 40px;
-        height: calc(100% - 120px);
-    }
-}
-
 @media only screen and (max-width: 1000px) {
+    #container {
+        perspective: none;
+    }
+
+    #splashscreen {
+        transform: none;
+    }
+
     #wcu {
         flex-direction: column;
     }
@@ -863,11 +895,11 @@ nav ul>li>a:hover {
         min-height: 800px;
         padding: 40px;
     }
-    #team-members {
+    .info-box-container-alt {
         flex-direction: column;
         align-items: center;
     }
-    #team-members>*+* {
+    .info-box-container-alt>*+* {
         margin-top: 80px;
     }
     nav>ul>li:nth-child(2),
