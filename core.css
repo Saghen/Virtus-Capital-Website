@@ -936,4 +936,7 @@ nav ul>li>a:hover {
     #logo>a>img {
         display: none;
     }
+    #contact-info {
+        flex-direction: column;
+    }
 }
