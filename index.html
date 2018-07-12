@@ -21,7 +21,6 @@
         <nav>
             <div id="logo">
                 <a href="#splashscreen" style="text-decoration: none;">
-                    <!--<span class="bitter" style="font-size: 1.3em; font-weight: normal;">VIRTUS <span id="logo-capital">CAPITAL</span></span>-->
                     <img src="imgs/logo.png" style="transition: 0.2s; width: 150px; filter: invert(100%) hue-rotate(180deg);">
                 </a>
             </div>
@@ -77,9 +76,9 @@
         </div>
         <div id="wcu">
             <div id="wcu-left">
-                <video id="player" muted>
-                    <source src="ok.mp4" type="video/mp4">
-                    <source src="ok.webm" type="video/webm">
+                <video id="player" muted loop>
+                    <source src="drone.mp4" type="video/mp4">
+                    <source src="drone.webm" type="video/webm">
                 </video>
                 <div id="wcu-quote" data-aos="fade-right">
                     <i class="fas fa-quote-left"></i>
@@ -208,21 +207,21 @@
             <div class="line-seperator-light"></div>
             <div class="info-box-container-alt" data-aos="fade-down" style="max-width: 1600px;">
                 <a href="#" onclick="toggleAccordion('case-studies-accordions', 0)">
-                    <div class="info-box-alt info-box-alt-wide" style="background-image: url(imgs/FullSizeRender.jpg)">
+                    <div class="info-box-alt info-box-alt-wide" style="background-image: url(imgs/splashscreen.jpg)">
                         <div class="info-box-alt-info">
                             <span>685 Queenston Road, Hamilton</span>
                         </div>
                     </div>
                 </a>
                 <a href="#" onclick="toggleAccordion('case-studies-accordions', 1)">
-                    <div class="info-box-alt info-box-alt-wide" style="background-image: url(imgs/FullSizeRender.jpg)">
+                    <div class="info-box-alt info-box-alt-wide" style="background-image: url(imgs/splashscreen.jpg)">
                         <div class="info-box-alt-info">
                             <span>4 High Street, Collingwood</span>
                         </div>
                     </div>
                 </a>
                 <a href="#" onclick="toggleAccordion('case-studies-accordions', 2)">
-                    <div class="info-box-alt info-box-alt-wide" style="background-image: url(imgs/FullSizeRender.jpg)">
+                    <div class="info-box-alt info-box-alt-wide" style="background-image: url(imgs/splashscreen.jpg)">
                         <div class="info-box-alt-info">
                             <span>480 Bayfield Street, Barrie</span>
                         </div>
@@ -236,7 +235,7 @@
                     <div class="case-study">
                         <div class="case-study-imgs">
                             <div>
-                                <img src="imgs/FullSizeRender.jpg">
+                                <img src="imgs/splashscreen.jpg">
                                 <div>
                                     <h3>Investment Thesis</h3>
                                     <ul>
@@ -249,7 +248,7 @@
                                 </div>
                             </div>
                             <div>
-                                <img src="imgs/FullSizeRender.jpg">
+                                <img src="imgs/splashscreen.jpg">
                                 <div>
                                     <h3>Outcome</h3>
                                     <ul>
@@ -288,7 +287,7 @@
                     <div class="case-study">
                         <div class="case-study-imgs">
                             <div>
-                                <img src="imgs/FullSizeRender.jpg">
+                                <img src="imgs/splashscreen.jpg">
                                 <div>
                                     <h3>Investment Thesis</h3>
                                     <ul>
@@ -299,7 +298,7 @@
                                 </div>
                             </div>
                             <div>
-                                <img src="imgs/FullSizeRender.jpg">
+                                <img src="imgs/splashscreen.jpg">
                                 <div>
                                     <h3>Outcome</h3>
                                     <ul>
@@ -341,7 +340,7 @@
                     <div class="case-study">
                         <div class="case-study-imgs">
                             <div>
-                                <img src="imgs/FullSizeRender.jpg">
+                                <img src="imgs/splashscreen.jpg">
                                 <div>
                                     <h3>Investment Thesis</h3>
                                     <ul>
@@ -354,7 +353,7 @@
                                 </div>
                             </div>
                             <div>
-                                <img src="imgs/FullSizeRender.jpg">
+                                <img src="imgs/splashscreen.jpg">
                                 <div>
                                     <h3>Outcome</h3>
                                     <ul>
@@ -412,8 +411,7 @@
                 let app = new Vue({
                     el: '#news-container',
                     data: {
-                        news: [
-                            {
+                        news: [{
                                 title: 'This is the title of the news article that was written',
                                 date: 'june 18, 2018',
                                 author: 'Liam',
@@ -471,27 +469,24 @@
         </div>
     </div>
     <script>
-        const player = new Plyr('#player', {
-            loop: { active: true }
-        });
+        const player = document.querySelector('#player');
 
-        let container = document.getElementById('container');
-        let el = document.getElementById('player');
+        let container = document.querySelector('#container');
+        let el = document.querySelector('#player');
         let elTop = el.getBoundingClientRect().top;
-        let windowHeight = window.innerHeight;
+        let windowHeight = innerHeight;
 
         window.addEventListener('resize', () => {
             el = document.getElementById('player');
             elTop = el.getBoundingClientRect().top;
-            windowHeight = window.innerHeight;
+            windowHeight = innerHeight;
         })
 
         container.addEventListener('scroll', (e) => {
-            if (container.scrollTop > elTop - windowHeight && container.scrollTop < el.scrollHeight + elTop + windowHeight) {
-                if (!player.playing) player.play();
-            }
-            else {
-                if (player.playing) {
+            if (container.scrollTop > elTop - windowHeight && container.scrollTop < el.scrollHeight + elTop) {
+                if (player.paused) player.play();
+            } else {
+                if (!player.paused) {
                     player.pause();
                 }
             }
