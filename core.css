@@ -1,4 +1,4 @@
-/* CSS Normalization */
+/* #region CSS Normalization */
 
 html {
     line-height: 1.15;
@@ -35,14 +35,11 @@ abbr[title] {
     text-decoration: underline dotted
 }
 
-b,
-strong {
+b, strong {
     font-weight: bolder
 }
 
-code,
-kbd,
-samp {
+code, kbd, samp {
     font-family: monospace, monospace;
     font-size: 1em
 }
@@ -51,8 +48,7 @@ small {
     font-size: 80%
 }
 
-sub,
-sup {
+sub, sup {
     font-size: 75%;
     line-height: 0;
     position: relative;
@@ -71,46 +67,31 @@ img {
     border-style: none
 }
 
-button,
-input,
-optgroup,
-select,
-textarea {
+button, input, optgroup, select, textarea {
     font-family: inherit;
     font-size: 100%;
     line-height: 1.15;
     margin: 0
 }
 
-button,
-input {
+button, input {
     overflow: visible
 }
 
-button,
-select {
+button, select {
     text-transform: none
 }
 
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+button, [type="button"], [type="reset"], [type="submit"] {
     -webkit-appearance: button
 }
 
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
     border-style: none;
     padding: 0
 }
 
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring {
     outline: 1px dotted ButtonText
 }
 
@@ -135,14 +116,12 @@ textarea {
     overflow: auto
 }
 
-[type="checkbox"],
-[type="radio"] {
+[type="checkbox"], [type="radio"] {
     box-sizing: border-box;
     padding: 0
 }
 
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
     height: auto
 }
 
@@ -176,7 +155,9 @@ template {
     display: none
 }
 
-/* Fonts */
+/* #endregion CSS Normalization */
+
+/* #region Fonts */
 
 /* Bitter */
 
@@ -219,6 +200,8 @@ template {
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+/* #endregion Fonts */
+
 /* Global */
 
 html {
@@ -226,37 +209,26 @@ html {
     scroll-behavior: smooth;
 }
 
-#container {
-    perspective: 2px;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    transform-style: preserve-3d;
-    scroll-behavior: smooth;
-}
-
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4 {
     text-align: center;
     font-family: 'Bitter', Palantio, Georgia, Times, serif;
     margin: 0;
 }
 
-h2 {
-    font-size: 2em;
-}
-
 .button {
     display: inline-block;
-    color: #fff;
-    background: #3b89ff;
+    color: #3b89ff;
+    border: 2px #3b89ff solid;
     transition: 0.2s all;
     padding: 10px 20px;
     border-radius: 10px;
     text-decoration: none;
     white-space: nowrap;
+}
+
+.button:hover {
+    background: #3b89ff;
+    color: #fff;
 }
 
 .bitter {
@@ -277,13 +249,14 @@ h2 {
     background-color: #000
 }
 
-/* Header */
+/* #region Header */
 
 header {
     position: fixed;
     z-index: 100;
     width: 100vw;
     top: 0;
+    transition: 0.2s all;
 }
 
 nav {
@@ -352,66 +325,52 @@ nav ul>li>a:hover {
     color: #3274d8;
 }
 
+/* #endregion Header */
+
 /* Splashscreen */
 
-#splashscreen {
+#hero {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 100vh;
+    height: 600px;
+    padding: 80px 40px;
     color: #fff;
-    transform: translateZ(-1px) scale(1.5) translateX(-3px);
-    z-index: -1;
-}
-
-#splashscreen::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    background-image: url("./imgs/splashscreen2.jpg");
     background-color: #333;
     background-size: cover;
-    background-image: url("./imgs/splashscreen.jpg");
     background-position: center;
-    z-index: -1;
 }
 
-#splashscreen>div {
+#hero>div {
     max-width: 1200px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*padding: 40px;
-    background: rgba(0,0,0,0.4);
-    border-radius: 20px;*/
 }
 
-#splashscreen>div p {
-    color: #fff;
-    line-height: 1.5em;
-    font-size: 1.2em;
-    margin: 40px auto 30px auto;
-    max-width: 800px;
-    text-align: center;
+#hero * + * {
+    margin-top: 20px;
 }
 
-#splashscreen h2 {
-    font-size: 4em;
-    line-height: 1.3em;
+#hero h1 {
+    font-size: 7em;
     font-weight: normal;
 }
 
-#splashscreen .button {
-    margin: 20px auto 0 auto;
+#hero h2 {
+    font-size: 2em;
+}
+
+#hero .button {
+    font-size: 1.2em;
+    margin: 30px auto 0 auto;
 }
 
 /* About */
 
-#about,
-#meet-the-team {
+#about, #meet-the-team {
     position: relative;
     padding: 20px 40px;
     display: flex;
@@ -463,7 +422,7 @@ nav ul>li>a:hover {
     color: #000;
 }
 
-/* Why Choose Us */
+/* #region Why Choose Us */
 
 #wcu {
     display: flex;
@@ -541,8 +500,7 @@ nav ul>li>a:hover {
     margin-left: 30px;
 }
 
-.horizontal-info-box>div>p,
-.horizontal-info-box>div>h4 {
+.horizontal-info-box>div>p, .horizontal-info-box>div>h4 {
     text-align: left;
 }
 
@@ -600,6 +558,8 @@ nav ul>li>a:hover {
     align-items: center;
     padding: 80px;
 }
+
+/* #endregion Why Choose Us */
 
 /* Meet the team */
 
@@ -705,8 +665,7 @@ nav ul>li>a:hover {
     margin-top: 30px;
 }
 
-.case-study h3,
-.case-study h4 {
+.case-study h3, .case-study h4 {
     text-align: left;
     color: #3b89ff;
 }
@@ -787,8 +746,7 @@ nav ul>li>a:hover {
         align-items: center;
         text-align: center;
     }
-    .case-study h3,
-    .case-study h4 {
+    .case-study h3, .case-study h4 {
         text-align: center;
     }
     .case-study-big-facts>*+* {
@@ -878,11 +836,9 @@ nav ul>li>a:hover {
     #container {
         perspective: none;
     }
-
-    #splashscreen {
+    #hero {
         transform: none;
     }
-
     #wcu {
         flex-direction: column;
     }
@@ -906,9 +862,7 @@ nav ul>li>a:hover {
     .info-box-container-alt>*+* {
         margin-top: 80px;
     }
-    nav>ul>li:nth-child(2),
-    nav>ul>li:nth-child(3),
-    nav>ul>li:nth-child(4) {
+    nav>ul>li:nth-child(2), nav>ul>li:nth-child(3), nav>ul>li:nth-child(4) {
         display: none;
     }
     nav>ul {
@@ -926,10 +880,10 @@ nav ul>li>a:hover {
         padding: 40px;
         height: auto;
     }
-    #splashscreen>div>p {
+    #hero>div>p {
         display: none;
     }
-    #splashscreen>div>h2 {
+    #hero>div>h2 {
         margin-bottom: 20px;
         font-size: 3em;
     }
