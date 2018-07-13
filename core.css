@@ -599,7 +599,8 @@ nav ul>li>a:hover {
 /* Accordions */
 
 .accordion-container {
-    padding-top: 40px;
+    transform: translateY(-120px);
+    padding-top: 160px;
 }
 
 .accordion {
