@@ -599,7 +599,7 @@ nav ul>li>a:hover {
 /* Accordions */
 
 .accordion-container {
-    margin-top: 40px;
+    padding-top: 40px;
 }
 
 .accordion {
