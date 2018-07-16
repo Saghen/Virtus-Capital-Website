@@ -93,7 +93,7 @@
                 addImage: function () {
                     fetch('https://virtuscapital.ca/image-upload?token=' + getParameterByName('token'), {
                         method: 'post', 
-                        body: document.querySelector('#image-uploader')
+                        body: document.querySelector('#image-uploader').files[0]
                     }).then((res, err) => {
                         console.log(err);
                         console.log(res);
@@ -102,51 +102,12 @@
             },
             data: {
                 add: false,
-                news: [
-                    {
-                        title: 'This is the title of the news article that was written',
-                        date: 'june 18, 2018',
-                        author: 'Liam',
-                        img: 'http://cdn1-www.dogtime.com/assets/uploads/gallery/samoyed-dogs-and-puppies/samoyed-dogs-puppies-1.jpg',
-                        link: '#',
-                        edit: false
-                    },
-                    {
-                        title: 'This is the title of the news article that was written',
-                        date: 'june 18, 2018',
-                        author: 'Liam',
-                        img: 'http://cdn1-www.dogtime.com/assets/uploads/gallery/samoyed-dogs-and-puppies/samoyed-dogs-puppies-1.jpg',
-                        link: '#',
-                        edit: false
-                    },
-                    {
-                        title: 'This is the title of the news article that was written',
-                        date: 'june 18, 2018',
-                        author: 'Liam',
-                        img: 'http://cdn1-www.dogtime.com/assets/uploads/gallery/samoyed-dogs-and-puppies/samoyed-dogs-puppies-1.jpg',
-                        link: '#',
-                        edit: false
-                    },
-                    {
-                        title: 'This is the title of the news article that was written',
-                        date: 'june 18, 2018',
-                        author: 'Liam',
-                        img: 'http://cdn1-www.dogtime.com/assets/uploads/gallery/samoyed-dogs-and-puppies/samoyed-dogs-puppies-1.jpg',
-                        link: '#',
-                        edit: false
-                    },
-                    {
-                        title: 'This is the title of the news article that was written',
-                        date: 'june 18, 2018',
-                        author: 'Liam',
-                        img: 'http://cdn1-www.dogtime.com/assets/uploads/gallery/samoyed-dogs-and-puppies/samoyed-dogs-puppies-1.jpg',
-                        link: '#',
-                        edit: false
-                    },
-                ]
+                news: []
             },
             created() {
-                // For use when deployed
+                fetch('https://virtuscapital.ca/js/news.json')
+                    .then(res => res.json())
+                    .then(res => this.$data.news = res);
             }
         })
 
