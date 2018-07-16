@@ -7,7 +7,7 @@ let express = require('express'),
 
 app.use(compression());
 app.use(express.static('static'));
-app.use(bodyParser());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/update-news', (req, res) => {
     if(req.query.token != 'gHsGEw7u4YTcaOf') {
@@ -22,7 +22,7 @@ app.post('/update-news', (req, res) => {
         res.status(401).send('Token was incorrect. Please email liamcdyer@gmail.com if a new token is needed.');
         return;
     }
-    fs.writeFile(path.resolve(__dirname, 'static/js/news.json'), JSON.stringify(req.body));
+    fs.writeFile(path.resolve(__dirname, 'static/js/news.json'), JSON.stringify(req.body), err => { if(err) console.log(err) });
     res.json({success: true});
 })
 
