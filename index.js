@@ -2,12 +2,12 @@ let express = require('express'),
     app = express(),
     path = require('path'),
     compression = require('compression'),
-    formidable = require('express-formidable'),
+    bodyParser = require('body-parser'),
     fs = require('fs');
 
 app.use(compression());
 app.use(express.static('static'));
-app.use(formidable());
+app.use(bodyParser());
 
 app.get('/update-news', (req, res) => {
     if(req.query.token != 'gHsGEw7u4YTcaOf') {
