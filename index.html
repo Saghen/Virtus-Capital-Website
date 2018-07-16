@@ -42,7 +42,7 @@
     </header>
     <div id="hero">
         <div>
-            <h1 style="color: #3988ff;">Virtus <span style="color: #fff;">Capital</span></h1>
+            <h1 style="color: #3988ff; text-shadow: 1px 1px #444;">Virtus <span style="color: #fff;">Capital</span></h1>
             <h2>A Tenant Driven Approach To Superior<br> Investment Returns</h2>
             <a href="#about" class="button">Learn More</a>
         </div>
@@ -197,21 +197,21 @@
         <div class="line-seperator-light"></div>
         <div class="info-box-container-alt" style="max-width: 1600px;">
             <a href="#case-studies-accordions" onclick="toggleAccordion('case-studies-accordions', 0, event)">
-                <div class="info-box-alt info-box-alt-wide" style="background-image: url(imgs/splashscreen.jpg)">
+                <div class="info-box-alt info-box-alt-wide" style="background-image: url(imgs/cs_1.png)">
                     <div class="info-box-alt-info">
                         <span>685 Queenston Road, Hamilton</span>
                     </div>
                 </div>
             </a>
             <a href="#case-studies-accordions" onclick="toggleAccordion('case-studies-accordions', 1, event)">
-                <div class="info-box-alt info-box-alt-wide" style="background-image: url(imgs/splashscreen.jpg)">
+                <div class="info-box-alt info-box-alt-wide" style="background-image: url(imgs/cs_2.png)">
                     <div class="info-box-alt-info">
                         <span>4 High Street, Collingwood</span>
                     </div>
                 </div>
             </a>
             <a href="#case-studies-accordions" onclick="toggleAccordion('case-studies-accordions', 2, event)">
-                <div class="info-box-alt info-box-alt-wide" style="background-image: url(imgs/splashscreen.jpg)">
+                <div class="info-box-alt info-box-alt-wide" style="background-image: url(imgs/cs_3.png)">
                     <div class="info-box-alt-info">
                         <span>480 Bayfield Street, Barrie</span>
                     </div>
@@ -225,7 +225,6 @@
                 <div class="case-study">
                     <div class="case-study-imgs">
                         <div>
-                            <img src="imgs/splashscreen.jpg">
                             <div>
                                 <h3>Investment Thesis</h3>
                                 <ul>
@@ -238,7 +237,6 @@
                             </div>
                         </div>
                         <div>
-                            <img src="imgs/splashscreen.jpg">
                             <div>
                                 <h3>Outcome</h3>
                                 <ul>
@@ -277,7 +275,6 @@
                 <div class="case-study">
                     <div class="case-study-imgs">
                         <div>
-                            <img src="imgs/splashscreen.jpg">
                             <div>
                                 <h3>Investment Thesis</h3>
                                 <ul>
@@ -288,7 +285,6 @@
                             </div>
                         </div>
                         <div>
-                            <img src="imgs/splashscreen.jpg">
                             <div>
                                 <h3>Outcome</h3>
                                 <ul>
@@ -330,7 +326,6 @@
                 <div class="case-study">
                     <div class="case-study-imgs">
                         <div>
-                            <img src="imgs/splashscreen.jpg">
                             <div>
                                 <h3>Investment Thesis</h3>
                                 <ul>
@@ -343,7 +338,6 @@
                             </div>
                         </div>
                         <div>
-                            <img src="imgs/splashscreen.jpg">
                             <div>
                                 <h3>Outcome</h3>
                                 <ul>
@@ -429,27 +423,16 @@
                 {
                     title: 'This is the title of the news article that was written',
                     date: 'june 18, 2018',
-                    author: 'Liam'
+                    author: 'Liam',
+                    img: 'http://cdn1-www.dogtime.com/assets/uploads/gallery/samoyed-dogs-and-puppies/samoyed-dogs-puppies-1.jpg',
+                    link: '#'
                 },
                 {
                     title: 'This is the title of the news article that was written',
                     date: 'june 18, 2018',
-                    author: 'Liam'
-                },
-                {
-                    title: 'This is the title of the news article that was written',
-                    date: 'june 18, 2018',
-                    author: 'Liam'
-                },
-                {
-                    title: 'This is the title of the news article that was written',
-                    date: 'june 18, 2018',
-                    author: 'Liam'
-                },
-                {
-                    title: 'This is the title of the news article that was written',
-                    date: 'june 18, 2018',
-                    author: 'Liam'
+                    author: 'Liam',
+                    img: 'http://cdn1-www.dogtime.com/assets/uploads/gallery/samoyed-dogs-and-puppies/samoyed-dogs-puppies-1.jpg',
+                    link: '#'
                 }
                 ]
             },
@@ -474,7 +457,7 @@
             let parent = document.querySelector('#' + container);
             let elem = parent.children[childNum];
             if (elem.classList.contains('accordion-expanded')) {
-                elem.style.maxHeight = '0px';
+                elem.style.height = '0px';
                 elem.style.padding = '0px 40px';
                 setTimeout(() => elem.classList.remove('accordion-expanded'), 400);
                 return;
@@ -482,21 +465,23 @@
 
             for (let item of parent.children) {
                 if (item.classList.contains('accordion-expanded')) {
-                    item.style.maxHeight = '0px';
+                    item.style.height = '0px';
                     item.style.padding = '0px 40px';
                     setTimeout(() => {
                         item.classList.remove('accordion-expanded');
                         elem.classList.add('accordion-expanded');
-                        elem.style.maxHeight = elem.scrollHeight + "px";
+                        elem.style.height = elem.scrollHeight + "px";
                         elem.style.padding = '40px';
+                        setTimeout(() => elem.style.height = 'auto', 500);
                     }, 500);
                     return;
                 }
             }
 
             elem.classList.add('accordion-expanded');
-            elem.style.maxHeight = elem.scrollHeight + "px";
+            elem.style.height = elem.scrollHeight + "px";
             elem.style.padding = '40px';
+            setTimeout(() => elem.style.height = 'auto', 500);
         }
     </script>
 </body>

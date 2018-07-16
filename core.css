@@ -274,7 +274,7 @@ nav>div>a {
 
 nav ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin-left: 40px;
     max-width: 600px;
     width: 100%;
@@ -337,7 +337,7 @@ nav ul>li>a:hover {
     height: 600px;
     padding: 80px 40px;
     color: #fff;
-    background-image: url("./imgs/splashscreen2.jpg");
+    background-image: url("./imgs/splashscreen3.jpg");
     background-color: #333;
     background-size: cover;
     background-position: center;
@@ -606,7 +606,7 @@ nav ul>li>a:hover {
 .accordion {
     background-color: #ededed;
     transition: 0.4s ease-in-out;
-    max-height: 0px;
+    height: 0px;
     max-width: 1000px;
     padding: 0 40px;
     overflow: hidden;
@@ -721,8 +721,8 @@ nav ul>li>a:hover {
 
 .case-study-big-facts {
     display: flex;
-    justify-content: space-around;
-    padding-bottom: 20px;
+    justify-content: space-between;
+    padding: 0 20px 20px 20px;
     border-bottom: 1px solid #000;
 }
 
@@ -834,12 +834,6 @@ nav ul>li>a:hover {
 /* Responsiveeeee */
 
 @media only screen and (max-width: 1000px) {
-    #container {
-        perspective: none;
-    }
-    #hero {
-        transform: none;
-    }
     #wcu {
         flex-direction: column;
     }
@@ -888,9 +882,7 @@ nav ul>li>a:hover {
         margin-bottom: 20px;
         font-size: 3em;
     }
-    #logo>a>img {
-        display: none;
-    }
+
     #contact-info {
         flex-direction: column;
     }
