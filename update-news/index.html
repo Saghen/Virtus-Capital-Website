@@ -7,20 +7,21 @@
     <title>Update News</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link rel="stylesheet" href="../static/news-style.css">
+    <link rel="stylesheet" href="../news-style.css">
 </head>
 
 <body>
     <div id="vue">
         <button v-on:click="toggleAdd()">Add</button>
-        <button>Save Changes</button>
-        <form class="inputs" v-if="add" style="display: flex; align-items: flex-start;">
+        <button v-on:click="saveItems()">Save Changes</button>
+        <form id="form" class="inputs" v-if="add" style="display: flex; align-items: flex-start; margin-top: 10px;">
             Image Link:
-            <input type="text"> Title:
-            <input type="text"> Date:
-            <input type="text"> Author:
-            <input type="text"> Link:
-            <input type="text">
+            <input name="img" type="text"> Title:
+            <input name="title" type="text"> Date:
+            <input name="date" type="text"> Author:
+            <input name="author" type="text"> Link:
+            <input name="link" type="text">
+            <button v-on:click.prevent="addItem()">Submit</button>
         </form>
         <div id="news-container">
             <a class="news-item" v-for="(item, key, index) in news">
@@ -58,8 +59,32 @@
                 removeItem: function (index) {
                     this.$data.news.splice(index, 1);
                 },
-                toggleAdd: function() {
+                toggleAdd: function () {
                     this.$data.add = !this.$data.add;
+                },
+                addItem: function () {
+                    let form = document.querySelector('#form');
+                    let item = {};
+                    item.img = form.img.value;
+                    item.title = form.title.value;
+                    item.date = form.date.value;
+                    item.author = form.author.value || 'Charles';
+                    item.link = form.link.value || '#';
+                    item.edit = false;
+                    this.$data.news.unshift(item);
+                },
+                saveItems: function () {
+                    fetch('https://virtuscapital.ca/update-news?token=' + getParameterByName('token'), {
+                        method: 'post', 
+                        headers: {
+                            'Accept': 'application/json, text/plain, */*',
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(this.$data.news)
+                    }).then((res, err) => {
+                        console.log(err);
+                        console.log(res);
+                    })
                 }
             },
             data: {
@@ -112,10 +137,10 @@
             }
         })
 
-        function getParameterByName(name, url) {
-            if (!url) url = window.location.href;
+        function getParameterByName(name) {
+            let url = window.location.href;
             name = name.replace(/[\[\]]/g, '\\$&');
-            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+            let regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
                 results = regex.exec(url);
             if (!results) return null;
             if (!results[2]) return '';
