@@ -444,7 +444,9 @@
                 ]
             },
             created() {
-                // For use when deployed
+                fetch('https://virtuscapital.ca/js/news.json')
+                    .then(res => res.json)
+                    .then(res => this.$data.news = res);
             }
         })
     </script>
