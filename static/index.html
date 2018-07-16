@@ -445,7 +445,7 @@
             },
             created() {
                 fetch('https://virtuscapital.ca/js/news.json')
-                    .then(res => res.json)
+                    .then(res => res.json())
                     .then(res => this.$data.news = res);
             }
         })
