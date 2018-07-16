@@ -3,11 +3,13 @@ let express = require('express'),
     path = require('path'),
     compression = require('compression'),
     bodyParser = require('body-parser'),
-    fs = require('fs');
+    fs = require('fs'),
+    fileUpload = require('express-fileupload');
 
 app.use(compression());
 app.use(express.static('static'));
 app.use(bodyParser.json());
+app.use(fileUpload());
 
 app.get('/update-news', (req, res) => {
     if(req.query.token != 'gHsGEw7u4YTcaOf') {
@@ -24,6 +26,10 @@ app.post('/update-news', (req, res) => {
     }
     fs.writeFile(path.resolve(__dirname, 'static/js/news.json'), JSON.stringify(req.body), err => { if(err) console.log(err) });
     res.json({success: true});
+});
+
+app.post('/image-upload', (req, res) => {
+    console.log(req.files);
 })
 
 require('greenlock-express').create({

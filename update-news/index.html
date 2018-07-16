@@ -23,6 +23,10 @@
             <input name="link" type="text">
             <button v-on:click.prevent="addItem()">Submit</button>
         </form>
+        <form id="image-uploader" class="inputs" style="display: flex; align-items: flex-start; margin-top: 10px;">
+            File: <input type="file">
+            <button v-on:click.prevent="addImage()">Submit</button>
+        </form>
         <div id="news-container">
             <a class="news-item" v-for="(item, key, index) in news">
                 <img :src="item.img" style="width: 320px; height: 180px; object-fit: cover; background-color: #ccc;">
@@ -81,6 +85,15 @@
                             'Content-Type': 'application/json'
                         },
                         body: JSON.stringify(this.$data.news)
+                    }).then((res, err) => {
+                        console.log(err);
+                        console.log(res);
+                    })
+                },
+                addImage: function () {
+                    fetch('https://virtuscapital.ca/image-upload?token=' + getParameterByName('token'), {
+                        method: 'post', 
+                        body: document.querySelector('#image-uploader')
                     }).then((res, err) => {
                         console.log(err);
                         console.log(res);
