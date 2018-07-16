@@ -874,11 +874,11 @@ nav ul>li>a:hover {
         display: none
     }
     nav>ul {
-        margin-left: 0;
-        padding: 0 10px
+        margin: 0;
+        padding: 0;
     }
     nav {
-        padding: 10px
+        padding: 20px;
     }
     .info-box-container {
         flex-direction: column;
@@ -887,6 +887,9 @@ nav ul>li>a:hover {
     #wcu-right>div {
         padding: 40px;
         height: auto
+    }
+    #logo img {
+        width: 100px !important;
     }
     #contact-info {
         flex-direction: column
