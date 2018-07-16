@@ -6,8 +6,8 @@ let express = require('express'),
     fs = require('fs');
 
 app.use(compression());
-app.use(formidable());
 app.use(express.static('static'));
+app.use(formidable());
 
 app.get('/update-news', (req, res) => {
     if(req.query.token != 'gHsGEw7u4YTcaOf') {
