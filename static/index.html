@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Virtus Capital</title>
+    <title>Virtus Capital Investment</title>
+    <description>Virtus Capital takes a tenant driven approach to superior investment returns focused on purchasing and repositioning under-performing retail assets by adding value through a combination of increased rental revenue, filling vacancy, and developing residual land</description>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
         crossorigin="anonymous">
     <link rel="icon" type="image/png" href="imgs/favicon.png" />
@@ -18,7 +19,7 @@
         <nav>
             <div id="logo">
                 <a href="#splashscreen" style="text-decoration: none;">
-                    <img src="imgs/logo.png" style="transition: 0.2s; width: 150px; filter: invert(100%) hue-rotate(180deg);">
+                    <img src="imgs/logo.png" alt="Virtus Capital" style="transition: 0.2s; width: 150px; filter: invert(100%) hue-rotate(180deg);">
                 </a>
             </div>
             <ul>
@@ -119,7 +120,7 @@
         </div>
     </div>
     <div id="meet-the-team">
-        <h2>Meet the Team</h2>
+        <h2>Experienced Team</h2>
         <div class="line-seperator-light"></div>
         <div class="info-box-container-alt" style="max-width: 1200px;">
             <a href="#team-accordions" onclick="toggleAccordion('team-accordions', 0, event)">
@@ -385,7 +386,7 @@
         <div class="line-seperator-light"></div>
         <div id="news-container">
             <a :href="item.link" class="news-item" v-for="item in news">
-                <img :src="item.img" style="width: 320px; height: 180px; object-fit: cover; background-color: #ccc;">
+                <img :src="item.img" alt="News Image" style="width: 320px; height: 180px; object-fit: cover; background-color: #ccc;">
                 <h3>{{ item.title }}</h3>
                 <div>
                     <span>{{ item.date }}</span>
