@@ -1,7 +1,9 @@
 let express = require('express'),
     app = express(),
-    path = require('path');
+    path = require('path'),
+    compression = require('compression');
 
+app.use(compression());
 app.use(express.static('static'));
 
 app.get('/update-news', (req, res) => {
