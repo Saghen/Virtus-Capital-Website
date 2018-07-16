@@ -834,6 +834,17 @@ nav ul>li>a:hover {
 /* Responsiveeeee */
 
 @media only screen and (max-width: 1000px) {
+    #hero h1 {
+        font-size: 5em;
+    }
+    #hero>div>p {
+        display: none;
+    }
+    #hero>div>h2 {
+        margin-bottom: 20px;
+        font-size: 2em;
+        font-weight: 100;
+    }
     #wcu {
         flex-direction: column;
     }
@@ -874,13 +885,6 @@ nav ul>li>a:hover {
     #wcu-right>div {
         padding: 40px;
         height: auto;
-    }
-    #hero>div>p {
-        display: none;
-    }
-    #hero>div>h2 {
-        margin-bottom: 20px;
-        font-size: 3em;
     }
     #logo {
         display: none;
