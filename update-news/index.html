@@ -7,14 +7,23 @@
     <title>Update News</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link rel="stylesheet" href="news-style.css">
+    <link rel="stylesheet" href="../static/news-style.css">
 </head>
 
 <body>
-    <button>Add</button>
-    <div id="news-container">
-        <div v-for="item in news">
-            <a class="news-item">
+    <div id="vue">
+        <button v-on:click="toggleAdd()">Add</button>
+        <button>Save Changes</button>
+        <form class="inputs" v-if="add" style="display: flex; align-items: flex-start;">
+            Image Link:
+            <input type="text"> Title:
+            <input type="text"> Date:
+            <input type="text"> Author:
+            <input type="text"> Link:
+            <input type="text">
+        </form>
+        <div id="news-container">
+            <a class="news-item" v-for="(item, key, index) in news">
                 <img :src="item.img" style="width: 320px; height: 180px; object-fit: cover; background-color: #ccc;">
                 <h3>{{ item.title }}</h3>
                 <div>
@@ -24,78 +33,94 @@
                     </span>
                 </div>
                 <div class="buttons">
-                    <button onclick="openEdit()">Edit</button>
-                    <button onclick="removeItem()">Remove</button>
+                    <button v-on:click="toggleEdit(item)">Edit</button>
+                    <button v-on:click="removeItem(index)">Remove</button>
                 </div>
-                <div class="inputs">
-                    Image Link: <input type="text">
-                    Title: <input type="text">
-                    Date: <input type="text">
-                    Author: <input type="text">
-                    Article 
-                    Link: <input type="text">
+                <div class="inputs" v-if="item.edit">
+                    Image Link:
+                    <input type="text" v-model="item.img"> Title:
+                    <input type="text" v-model="item.title"> Date:
+                    <input type="text" v-model="item.date"> Author:
+                    <input type="text" v-model="item.author"> Link:
+                    <input type="text" v-model="item.link">
                 </div>
             </a>
         </div>
     </div>
+
     <script>
         let app = new Vue({
-            el: '#news-container',
+            el: '#vue',
+            methods: {
+                toggleEdit: function (item) {
+                    item.edit = !item.edit;
+                },
+                removeItem: function (index) {
+                    this.$data.news.splice(index, 1);
+                },
+                toggleAdd: function() {
+                    this.$data.add = !this.$data.add;
+                }
+            },
             data: {
+                add: false,
                 news: [
                     {
                         title: 'This is the title of the news article that was written',
                         date: 'june 18, 2018',
                         author: 'Liam',
                         img: 'http://cdn1-www.dogtime.com/assets/uploads/gallery/samoyed-dogs-and-puppies/samoyed-dogs-puppies-1.jpg',
-                        link: '#'
+                        link: '#',
+                        edit: false
                     },
                     {
                         title: 'This is the title of the news article that was written',
                         date: 'june 18, 2018',
-                        author: 'Liam'
+                        author: 'Liam',
+                        img: 'http://cdn1-www.dogtime.com/assets/uploads/gallery/samoyed-dogs-and-puppies/samoyed-dogs-puppies-1.jpg',
+                        link: '#',
+                        edit: false
                     },
                     {
                         title: 'This is the title of the news article that was written',
                         date: 'june 18, 2018',
-                        author: 'Liam'
+                        author: 'Liam',
+                        img: 'http://cdn1-www.dogtime.com/assets/uploads/gallery/samoyed-dogs-and-puppies/samoyed-dogs-puppies-1.jpg',
+                        link: '#',
+                        edit: false
                     },
                     {
                         title: 'This is the title of the news article that was written',
                         date: 'june 18, 2018',
-                        author: 'Liam'
+                        author: 'Liam',
+                        img: 'http://cdn1-www.dogtime.com/assets/uploads/gallery/samoyed-dogs-and-puppies/samoyed-dogs-puppies-1.jpg',
+                        link: '#',
+                        edit: false
                     },
                     {
                         title: 'This is the title of the news article that was written',
                         date: 'june 18, 2018',
-                        author: 'Liam'
+                        author: 'Liam',
+                        img: 'http://cdn1-www.dogtime.com/assets/uploads/gallery/samoyed-dogs-and-puppies/samoyed-dogs-puppies-1.jpg',
+                        link: '#',
+                        edit: false
                     },
-                    {
-                        title: 'This is the title of the news article that was written',
-                        date: 'june 18, 2018',
-                        author: 'Liam'
-                    },
-                    {
-                        title: 'This is the title of the news article that was written',
-                        date: 'june 18, 2018',
-                        author: 'Liam'
-                    },
-                    {
-                        title: 'This is the title of the news article that was written',
-                        date: 'june 18, 2018',
-                        author: 'Liam'
-                    },
-                    {
-                        title: 'This is the title of the news article that was written',
-                        date: 'june 18, 2018',
-                        author: 'Liam'
-                    }
                 ]
             },
             created() {
                 // For use when deployed
             }
         })
+
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
     </script>
 </body>
 

@@ -62,6 +62,7 @@ html {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    align-items: flex-start;
 }
 
 .news-item {
@@ -86,6 +87,14 @@ html {
     display: flex;
     justify-content: space-between;
     text-transform: uppercase;
+}
+
+.inputs {
+    flex-direction: column;
+}
+
+.inputs input {
+    margin: 5px 0 10px 0;
 }
 
 /* Buttons */

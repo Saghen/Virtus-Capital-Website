@@ -888,9 +888,6 @@ nav ul>li>a:hover {
         padding: 40px;
         height: auto
     }
-    #logo {
-        display: none
-    }
     #contact-info {
         flex-direction: column
     }
