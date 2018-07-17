@@ -29,16 +29,22 @@ app.post('/update-news', (req, res) => {
 });
 
 app.post('/image-upload', (req, res) => {
+    if (req.query.token != 'gHsGEw7u4YTcaOf') {
+        res.status(401).send('Token was incorrect. Please email liamcdyer@gmail.com if a new token is needed.');
+        return;
+    }
     console.log(req.files)
-    let oldPath = req.files.image.path;
-    let newPath = __dirname + "/static/uploads/" + req.files.image.name;
+    let oldPath = req.files.file.path;
+    let newPath = __dirname + "/static/uploads/" + req.files.file.name;
     fs.rename(oldPath, newPath, function (err) {
-        res.json({ success: false, error: err });
+        if (err) res.status(500).json({ success: false, error: err });
+        else res.json({ success: true })
     });
-    res.json({ success: true})
 })
 
-require('greenlock-express').create({
+app.listen(80)
+
+/*require('greenlock-express').create({
     version: 'draft-11'
   , server: 'https://acme-v02.api.letsencrypt.org/directory'
   , configDir: '~/.config/acme/'
@@ -48,4 +54,4 @@ require('greenlock-express').create({
   , app: app
   , communityMember: false
   , telemetry: false
-  }).listen(80, 443);
+  }).listen(80, 443);*/

@@ -23,9 +23,9 @@
             <input name="link" type="text">
             <button v-on:click.prevent="addItem()">Submit</button>
         </form>
-        <form id="image-uploader" class="inputs" style="display: flex; align-items: flex-start; margin-top: 10px;" enctype='multipart/form-data'>
-            File: <input type="file" name="file">
-            <button v-on:click.prevent="addImage()">Submit</button>
+        <form id="image-uploader" class="inputs" style="display: flex; align-items: flex-start; margin-top: 10px;" method="POST" enctype='multipart/form-data' action="http://localhost/image-upload">
+            File: <input id="file" type="file" name="file">
+            <button v-on:click.prevent="submitImage()">Submit</button>
         </form>
         <div id="news-container">
             <a class="news-item" v-for="(item, key, index) in news">
@@ -90,17 +90,19 @@
                         console.log(res);
                     })
                 },
-                addImage: function () {
-                    const formData = new FormData(document.querySelector('#image-uploader'))
-                    fetch('https://virtuscapital.ca/image-upload?token=' + getParameterByName('token'), {
-                        method: 'post', 
-                        headers: {
-                            'Content-Type': 'multipart/form-data'
-                        },
+                submitImage: function () {
+                    let formData = new FormData();
+                    formData.append('file', document.querySelector('#file').files[0]);
+                    fetch('http://virtuscapital.ca/image-upload?token=' + getParameterByName('token'), {
+                        method: 'POST', 
                         body: formData
-                    }).then((res, err) => {
-                        console.log(err);
+                    }).then((res) => {
                         console.log(res);
+                        if (res.ok == true) {
+                            alert('File successfully uploaded. The file can be found at https://virtuscapital.ca/uploads/' + document.querySelector('#file').files[0].name);
+                            return;
+                        }
+                        alert('Upload failed. Check that your token is correct in the address bar (you can check by reloading). Otherwise, contact Liam.');
                     })
                 }
             },
