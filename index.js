@@ -4,12 +4,12 @@ let express = require('express'),
     compression = require('compression'),
     bodyParser = require('body-parser'),
     fs = require('fs'),
-    multer = require('multer');
+    fileUpload = require('express-fileupload');
 
 app.use(compression());
 app.use(express.static('static'));
 app.use(bodyParser.json());
-app.use(multer({ dest: './static/uploads/' }))
+app.use(fileUpload());
 
 app.get('/update-news', (req, res) => {
     if(req.query.token != 'gHsGEw7u4YTcaOf') {
