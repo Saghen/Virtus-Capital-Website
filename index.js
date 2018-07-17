@@ -42,9 +42,7 @@ app.post('/image-upload', (req, res) => {
     });
 })
 
-app.listen(80)
-
-/*require('greenlock-express').create({
+require('greenlock-express').create({
     version: 'draft-11'
   , server: 'https://acme-v02.api.letsencrypt.org/directory'
   , configDir: '~/.config/acme/'
@@ -54,4 +52,4 @@ app.listen(80)
   , app: app
   , communityMember: false
   , telemetry: false
-  }).listen(80, 443);*/
+  }).listen(80, 443);
