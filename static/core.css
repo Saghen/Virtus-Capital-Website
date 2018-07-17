@@ -279,7 +279,6 @@ nav>div>a {
 nav ul {
     display: flex;
     justify-content: space-around;
-    justify-content: space-evenly;
     margin-left: 40px;
     max-width: 600px;
     width: 100%;
