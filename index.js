@@ -4,11 +4,12 @@ let express = require('express'),
     compression = require('compression'),
     bodyParser = require('body-parser'),
     fs = require('fs'),
-    upload = require('multer')({ dest: 'static/uploads/' });
+    multer = require('multer');
 
 app.use(compression());
 app.use(express.static('static'));
 app.use(bodyParser.json());
+app.use(multer({ dest: './static/uploads/' }))
 
 app.get('/update-news', (req, res) => {
     if(req.query.token != 'gHsGEw7u4YTcaOf') {
@@ -27,7 +28,7 @@ app.post('/update-news', (req, res) => {
     res.json({success: true});
 });
 
-app.post('/image-upload', upload.any(), (req, res) => {
+app.post('/image-upload', (req, res) => {
     console.log(req.files);
 })
 
