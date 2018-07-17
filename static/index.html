@@ -468,13 +468,14 @@
             let parent = document.querySelector('#' + container);
             let elem = parent.children[childNum];
             if (elem.classList.contains('accordion-expanded')) {
-                elem.style.height = '0px';
-                elem.style.padding = '0px 40px';
-                setTimeout(() => elem.classList.remove('accordion-expanded'), 400);
+                    elem.style.height = '0px';
+                    elem.style.padding = '0px 40px';
+                
+                setTimeout(() => elem.classList.remove('accordion-expanded'), 500);
                 return;
             }
 
-            for (let item of parent.children) {
+            for (let item of [].slice.call(parent.children)) {
                 if (item.classList.contains('accordion-expanded')) {
                     item.style.height = '0px';
                     item.style.padding = '0px 40px';
@@ -483,7 +484,6 @@
                         elem.classList.add('accordion-expanded');
                         elem.style.height = elem.scrollHeight + "px";
                         elem.style.padding = '40px';
-                        setTimeout(() => elem.style.height = 'auto', 500);
                     }, 500);
                     return;
                 }
@@ -492,8 +492,19 @@
             elem.classList.add('accordion-expanded');
             elem.style.height = elem.scrollHeight + "px";
             elem.style.padding = '40px';
-            setTimeout(() => elem.style.height = 'auto', 500);
         }
+
+        window.addEventListener('resize', () => {
+            let containers = [ document.querySelector('#team-accordions'), document.querySelector('#case-studies-accordions') ] 
+            for (let container of containers) {
+                for (let item of [].slice.call(container.children)) {
+                    if (item.classList.contains('accordion-expanded')) {
+                        item.style.height = item.scrollHeight;
+                        break;
+                    }
+                }
+            }
+        })
     </script>
 </body>
 
