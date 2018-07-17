@@ -499,7 +499,11 @@
             for (let container of containers) {
                 for (let item of [].slice.call(container.children)) {
                     if (item.classList.contains('accordion-expanded')) {
-                        item.style.height = item.scrollHeight + 'px';
+                        let scrollHeight = 20;
+                        for (let child of [].slice.call(item.children)) {
+                            scrollHeight += child.scrollHeight;
+                        }
+                        item.style.height = scrollHeight + 'px';
                         break;
                     }
                 }
