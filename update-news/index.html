@@ -91,9 +91,13 @@
                     })
                 },
                 addImage: function () {
+                    const formData = new FormData(document.querySelector('#image-uploader'))
                     fetch('https://virtuscapital.ca/image-upload?token=' + getParameterByName('token'), {
                         method: 'post', 
-                        body: document.querySelector('#image-uploader')
+                        headers: {
+                            'Content-Type': 'multipart/form-data'
+                        },
+                        body: formData
                     }).then((res, err) => {
                         console.log(err);
                         console.log(res);

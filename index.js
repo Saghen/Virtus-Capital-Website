@@ -29,7 +29,13 @@ app.post('/update-news', (req, res) => {
 });
 
 app.post('/image-upload', (req, res) => {
-    console.log(req.files);
+    console.log(req.files)
+    let oldPath = req.files.image.path;
+    let newPath = __dirname + "/static/uploads/" + req.files.image.name;
+    fs.rename(oldPath, newPath, function (err) {
+        res.json({ success: false, error: err });
+    });
+    res.json({ success: true})
 })
 
 require('greenlock-express').create({
