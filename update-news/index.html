@@ -23,8 +23,8 @@
             <input name="link" type="text">
             <button v-on:click.prevent="addItem()">Submit</button>
         </form>
-        <form id="image-uploader" class="inputs" style="display: flex; align-items: flex-start; margin-top: 10px;">
-            File: <input type="file">
+        <form class="inputs" style="display: flex; align-items: flex-start; margin-top: 10px;">
+            File: <input type="file" id="image-picker">
             <button v-on:click.prevent="addImage()">Submit</button>
         </form>
         <div id="news-container">
@@ -93,7 +93,7 @@
                 addImage: function () {
                     fetch('https://virtuscapital.ca/image-upload?token=' + getParameterByName('token'), {
                         method: 'post', 
-                        body: document.querySelector('#image-uploader').files[0]
+                        body: document.querySelector('#image-picker')
                     }).then((res, err) => {
                         console.log(err);
                         console.log(res);
