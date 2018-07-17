@@ -4,12 +4,12 @@ let express = require('express'),
     compression = require('compression'),
     bodyParser = require('body-parser'),
     fs = require('fs'),
-    fileUpload = require('express-fileupload');
+    formidable = require('express-formidable');
 
 app.use(compression());
 app.use(express.static('static'));
 app.use(bodyParser.json());
-app.use(fileUpload());
+app.use(formidable());
 
 app.get('/update-news', (req, res) => {
     if(req.query.token != 'gHsGEw7u4YTcaOf') {
