@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <header id="header">
+    <header id="header" class="scrolled-header">
         <nav>
             <div id="logo">
                 <a href="#splashscreen" style="text-decoration: none; position: relative; display: block;">
@@ -453,14 +453,14 @@
         })
     </script>
     <script>
-        window.addEventListener('scroll', () => {
+        /*window.addEventListener('scroll', () => {
             if (window.scrollY > 0) {
                 document.querySelector('header').classList.add('scrolled-header');
             }
             else {
                 document.querySelector('header').classList.remove('scrolled-header');
             }
-        })
+        })*/
 
         function toggleAccordion(container, childNum, e) {
             if (window.innerWidth > 800) e.preventDefault();
