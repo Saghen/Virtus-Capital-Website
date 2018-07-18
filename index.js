@@ -8,7 +8,6 @@ let express = require('express'),
 
 app.use(compression());
 app.use(express.static('static'));
-app.use(bodyParser.json());
 app.use(formidable());
 
 app.get('/update-news', (req, res) => {
@@ -24,8 +23,7 @@ app.post('/update-news', (req, res) => {
         res.status(401).send('Token was incorrect. Please email liamcdyer@gmail.com if a new token is needed.');
         return;
     }
-    fs.writeFile(path.resolve(__dirname, 'static/js/news.json'), JSON.stringify(req.body), err => { if(err) console.log(err) });
-    res.json({success: true});
+    fs.writeFile(path.resolve(__dirname, 'static/js/news.json'), JSON.stringify(req.fields), err => { if(err) return console.log(err); res.json({success: true}) });
 });
 
 app.post('/image-upload', (req, res) => {
@@ -33,7 +31,6 @@ app.post('/image-upload', (req, res) => {
         res.status(401).send('Token was incorrect. Please email liamcdyer@gmail.com if a new token is needed.');
         return;
     }
-    console.log(req.files)
     let oldPath = req.files.file.path;
     let newPath = __dirname + "/static/uploads/" + req.files.file.name;
     fs.rename(oldPath, newPath, function (err) {
