@@ -11,8 +11,9 @@
     <meta name="keywords" content="Virtus, Capital, Investment, Company, Money, Tenant">
     <link rel="shortcut icon" href="imgs/favicon-large.png" type="image/png">
     <link rel="apple-touch-icon" href="imgs/favicon-large.png" type="image/png">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-    <link rel="canonical" href="https://virtuscapital.ca/"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+    <link rel="canonical" href="https://virtuscapital.ca/" />
     <link rel="icon" type="image/png" href="imgs/favicon.png" />
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" href="core.css">
@@ -393,12 +394,7 @@
             <a :href="item.link" class="news-item" v-for="item in news">
                 <img :src="item.img" alt="News Image" style="width: 320px; height: 180px; object-fit: cover; background-color: #ccc;">
                 <h3>{{ item.title }}</h3>
-                <div>
-                    <span>{{ item.date }}</span>
-                    <span>BY
-                        <span style="color: #173f7a;">{{ item.author }}</span>
-                    </span>
-                </div>
+                <span>{{ item.date }}</span>
             </a>
         </div>
     </div>
@@ -426,21 +422,18 @@
                 news: [{
                     title: 'News Coming Soon',
                     date: 'July 16, 2018',
-                    author: 'TBD',
                     img: './imgs/coming_soon.jpg',
                     link: '#'
                 },
                 {
                     title: 'News Coming Soon',
                     date: 'July 16, 2018',
-                    author: 'TBD',
                     img: './imgs/coming_soon.jpg',
                     link: '#'
                 },
                 {
                     title: 'News Coming Soon',
                     date: 'July 16, 2018',
-                    author: 'TBD',
                     img: './imgs/coming_soon.jpg',
                     link: '#'
                 },
@@ -469,9 +462,9 @@
             let parent = document.querySelector('#' + container);
             let elem = parent.children[childNum];
             if (elem.classList.contains('accordion-expanded')) {
-                    elem.style.height = '0px';
-                    elem.style.padding = '0px 40px';
-                
+                elem.style.height = '0px';
+                elem.style.padding = '0px 40px';
+
                 setTimeout(() => elem.classList.remove('accordion-expanded'), 500);
                 return;
             }
@@ -496,7 +489,7 @@
         }
 
         window.addEventListener('resize', () => {
-            let containers = [ document.querySelector('#team-accordions'), document.querySelector('#case-studies-accordions') ] 
+            let containers = [document.querySelector('#team-accordions'), document.querySelector('#case-studies-accordions')]
             for (let container of containers) {
                 for (let item of [].slice.call(container.children)) {
                     if (item.classList.contains('accordion-expanded')) {

@@ -31,12 +31,7 @@
             <a class="news-item" v-for="(item, key, index) in news">
                 <img :src="item.img" style="width: 320px; height: 180px; object-fit: cover; background-color: #ccc;">
                 <h3>{{ item.title }}</h3>
-                <div>
-                    <span>{{ item.date }}</span>
-                    <span>BY
-                        <span style="color: #173f7a;">{{ item.author }}</span>
-                    </span>
-                </div>
+                <span>{{ item.date }}</span>
                 <div class="buttons">
                     <button v-on:click="toggleEdit(item)">Edit</button>
                     <button v-on:click="removeItem(index)">Remove</button>
@@ -45,8 +40,7 @@
                     Image Link:
                     <input type="text" v-model="item.img"> Title:
                     <input type="text" v-model="item.title"> Date:
-                    <input type="text" v-model="item.date"> Author:
-                    <input type="text" v-model="item.author"> Link:
+                    <input type="text" v-model="item.date"> Link:
                     <input type="text" v-model="item.link">
                 </div>
             </a>
