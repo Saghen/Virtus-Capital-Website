@@ -93,7 +93,7 @@
                 submitImage: function () {
                     let formData = new FormData();
                     formData.append('file', document.querySelector('#file').files[0]);
-                    fetch('http://virtuscapital.ca/image-upload?token=' + getParameterByName('token'), {
+                    fetch('https://virtuscapital.ca/image-upload?token=' + getParameterByName('token'), {
                         method: 'POST', 
                         body: formData
                     }).then((res) => {
