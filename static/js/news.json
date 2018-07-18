@@ -1,1 +1,26 @@
-[{"img":"https://images.snapd.com/p/3392417/3/1200/49a84253874bae4db70a274424c8952c","title":"Grand Opening of 'Eglinton and Tomken' Plaza","date":"January 10, 2018","author":"Charles","link":"https://northmississauga.snapd.com/events/view/1066659","edit":false},{"img":"https://specials-images.forbesimg.com/imageserve/743951464/960x0.jpg","title":"Six Reasons Private Equity Real Estate Funds Are An Attractive Alternative To Private REITs","date":"Nov 9, 2017","author":"Charles","link":"https://www.forbes.com/sites/forbesrealestatecouncil/2017/11/09/six-reasons-private-equity-real-estate-funds-are-an-attractive-alternative-to-private-reits/#51acfadc64a9","edit":false},{"img":"https://virtuscapital.ca/uploads/download.jpeg","title":"Real Estate May Be a Safe Haven in a Bear Market","date":"June 29, 2018","author":"Charles","link":"https://money.usnews.com/investing/real-estate-investments/articles/2018-06-29/real-estate-may-be-a-safe-haven-in-a-bear-market","edit":false}]
+[
+    {
+        "img": "https://virtuscapital.ca/uploads/download.jpeg",
+        "title": "Real Estate May Be a Safe Haven in a Bear Market",
+        "date": "June 29, 2018",
+        "author": "Charles",
+        "link": "https://money.usnews.com/investing/real-estate-investments/articles/2018-06-29/real-estate-may-be-a-safe-haven-in-a-bear-market",
+        "edit": false
+    },
+    {
+        "img": "https://images.snapd.com/p/3392417/3/1200/49a84253874bae4db70a274424c8952c",
+        "title": "Grand Opening of 'Eglinton and Tomken' Plaza",
+        "date": "January 10, 2018",
+        "author": "Charles",
+        "link": "https://northmississauga.snapd.com/events/view/1066659",
+        "edit": false
+    },
+    {
+        "img": "https://specials-images.forbesimg.com/imageserve/743951464/960x0.jpg",
+        "title": "Six Reasons Private Equity Real Estate Funds Are An Attractive Alternative To Private REITs",
+        "date": "Nov 9, 2017",
+        "author": "Charles",
+        "link": "https://www.forbes.com/sites/forbesrealestatecouncil/2017/11/09/six-reasons-private-equity-real-estate-funds-are-an-attractive-alternative-to-private-reits/#51acfadc64a9",
+        "edit": false
+    }
+]
