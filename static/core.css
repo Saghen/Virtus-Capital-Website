@@ -800,17 +800,12 @@ nav ul>li>a:hover {
 }
 
 .news-item>*+* {
-    margin-top: 15px
+    display: block;
+    margin-top: 15px;
 }
 
 .news-item h3 {
     text-align: left
-}
-
-.news-item>div {
-    display: flex;
-    justify-content: space-between;
-    text-transform: uppercase
 }
 
 #contact {
