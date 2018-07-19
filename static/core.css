@@ -368,7 +368,8 @@ nav ul>li>a:hover {
     max-width: 1200px;
     display: flex;
     flex-direction: column;
-    align-items: center
+    align-items: center;
+    transform: translateY(-50px);
 }
 
 #hero *+* {
