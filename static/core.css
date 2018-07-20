@@ -284,6 +284,7 @@ nav>div>a {
 nav ul {
     display: flex;
     justify-content: space-around;
+    align-items: flex-end;
     margin-left: 40px;
     max-width: 600px;
     width: 100%;
@@ -903,7 +904,15 @@ nav ul>li>a:hover {
     nav {
         padding: 20px;
     }
-    #logo img {
-        width: 100px !important;
+    #logo {
+        display: none;
+    }
+
+    ul img {
+        display: none;
+    }
+    
+    ul a {
+        display: inline-block !important;
     }
 }
