@@ -50,9 +50,9 @@
                 <p style="color: #555; margin-bottom: 0;">{{ item.summary }}</p>
                 <a :href="item.link" class="button" style="display: inline-block; align-self: center;">Learn More</a>
             </div>
-            <div v-show="!show">
+            <div v-show="!show" class="news-item" style="margin-top: 40px; height: auto; width: auto;">
                 <h3>Are You an Accredited Investor</h3>
-                <div class="line-seperator-light"></div>
+                <div class="line-seperator-light" style="margin: 20px auto;"></div>
                 <div style="display: flex; justify-content: center;">
                     <a href="#" v-on:click.prevent="show = true" class="button">Yes</a>
                     <a href="../" class="button" style="margin-left: 20px;">No</a>
@@ -69,22 +69,22 @@
                 show: false,
                 news: [{
                     title: 'Disclaimer',
-                    summary: 'A short disclaimer for the presentation found in the Investor Presentation content box.',
+                    summary: 'A disclaimer for the presentation found in the Investor Presentation.',
                     link: '../disclaimer/'
                 },
                 {
                     title: 'Term Sheet',
-                    summary: 'A short description explaining what the term sheet is that should probably go across 3 lines.',
+                    summary: 'Coming soon.',
                     link: '../term-sheet/'
                 },
                 {
                     title: 'Subscription Document',
-                    summary: 'A short description explaining what the subscription document is that should probably go across 3 lines.',
+                    summary: 'Coming soon.',
                     link: '../subscription-doc/'
                 },
                 {
                     title: 'Investor Presentation',
-                    summary: 'A short description explaining what the investor presentation is that should probably go across 3 lines.',
+                    summary: 'Coming soon.',
                     link: '../investor-presentation/'
                 },
                 ]
