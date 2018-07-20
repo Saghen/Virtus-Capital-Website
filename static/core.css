@@ -288,7 +288,7 @@ nav ul {
     margin-left: 40px;
     max-width: 600px;
     width: 100%;
-    float: right
+    transform: translateY(-5px);
 }
 
 nav ul>li {
