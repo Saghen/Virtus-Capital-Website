@@ -915,4 +915,8 @@ nav ul>li>a:hover {
     ul a {
         display: inline-block !important;
     }
+
+    nav ul {
+        transform: none;
+    }
 }
