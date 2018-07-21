@@ -265,7 +265,7 @@ header {
     z-index: 100;
     width: 100vw;
     top: 0;
-    transition: 0.2s all
+    transition: 0.2s background;
 }
 
 nav {
