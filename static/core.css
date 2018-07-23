@@ -285,15 +285,17 @@ nav ul {
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
-    margin-left: 40px;
+    margin: 0;
+    margin-left: 20px;
     max-width: 750px;
     width: 100%;
-    margin: 0;
+    padding: 0;
 }
 
 nav ul>li {
     display: inline-block;
-    list-style: none
+    list-style: none;
+    white-space: nowrap;
 }
 
 nav ul>li>a {
@@ -302,7 +304,7 @@ nav ul>li>a {
     color: #fff;
     text-decoration: none;
     transition: 0.2s color;
-    padding: 8px 15px;
+    padding: 10px 15px;
 }
 
 nav ul>li>a::after {
@@ -460,7 +462,6 @@ nav ul>li>a:hover {
     display: flex;
     justify-content: space-around;
     max-width: 1600px;
-    width: 100%;
     margin: auto;
 }
 
@@ -517,6 +518,19 @@ nav ul>li>a:hover {
     padding: 0 10px;
 }
 
+.info-box-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 40px auto;
+}
+
+.info-box-container>a {
+    display: block;
+    max-width: 400px;
+    padding: 0 10px;
+}
+
 .info-box-alt {
     position: relative;
     width: 300px;
@@ -559,7 +573,7 @@ nav ul>li>a:hover {
 }
 
 .accordion-light {
-    background-color: #444;
+    background-color: #fff;
 }
 
 .accordion-expanded {
@@ -779,16 +793,12 @@ nav ul>li>a:hover {
         font-size: 2em;
         font-weight: 100
     }
-    .info-box-container-alt {
-        flex-direction: column;
-        align-items: center
-    }
-    .info-box-container-alt>*+* {
-        margin-top: 80px
-    }
     .info-box-container {
         flex-direction: column;
         align-items: center
+    }
+    .info-box-container>*+* {
+        margin-top: 80px
     }
     #contact-info {
         flex-direction: column
@@ -821,7 +831,6 @@ nav ul>li>a:hover {
         flex-direction: column;
     }
     #about>div {
-        width: auto;
         flex-direction: column;
     }
 }
