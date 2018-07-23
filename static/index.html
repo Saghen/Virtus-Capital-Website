@@ -32,7 +32,6 @@
             <div id="logo">
                 <a href="#splashscreen" style="text-decoration: none; position: relative; display: block;">
                     <img src="imgs/logo.png" alt="Virtus Capital" style="transition: 0.2s; width: 150px;">
-                    <img src="imgs/logo_light.png" alt="Virtus Capital" style="position: absolute; transition: 0.2s; width: 150px; top: 0;">
                 </a>
             </div>
             <ul>
@@ -52,8 +51,9 @@
                     <a href="investor-relations/">Investor Relations</a>
                 </li>
                 <li>
-                    <a href="https://samanagement.ca"><img src="./imgs/sovereign-logo.png" style="height: 35px;"></a>
-                    <a href="https://samanagement.ca" style="display: none;">SAM</a>
+                    <a href="https://samanagement.ca">
+                        <img src="./imgs/sovereign-logo.png" style="height: 35px;">
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -63,77 +63,63 @@
             <h1 style="color: #3988ff; text-shadow: 1px 1px #444; font-family: Galatia, serif">VIRTUS
                 <span style="color: #fff;">CΛPITΛL</span>
             </h1>
-            <h2>A Tenant Driven Approach To Superior
-                <br> Investment Returns</h2>
-            <a href="#about" class="button">Learn More</a>
-        </div>
-    </div>
-    <div id="about">
-        <div class="info-box-container">
-            <div class="info-box">
-                <i class="fas fa-hand-holding-usd"></i>
-                <h3>$30 M</h3>
-                <h4>Capital to be Raised</h4>
-            </div>
-            <div class="info-box">
-                <i class="fas fa-dollar-sign"></i>
-                <h3>6%</h3>
-                <h4>Annual Cash Distribution</h4>
-            </div>
-            <div class="info-box">
-                <i class="fas fa-chart-line"></i>
-                <h3>20%</h3>
-                <h4>Historical Total Return</h4>
-            </div>
-        </div>
-    </div>
-    <div id="wcu">
-        <div id="wcu-left">
-            <video id="player" muted loop autoplay playsinline>
-                <source src="drone.mp4" type="video/mp4">
-            </video>
-            <div id="wcu-quote">
-                <i class="fas fa-quote-left"></i>
-                <span class="bitter">Value added real estate investing</span>
-            </div>
-            <p>The Virtus Capital fund will focus on purchasing and repositioning under-performing retail assets by adding value
-                through a combination of increased rental revenue, filling vacancy, and developing residual land. Asset value
-                is enhanced with the addition of stronger tenants at higher lease rates.</p>
-        </div>
-        <div id="wcu-right">
-            <div>
-                <h2 style="text-align: left;">The Virtus Advantage</h2>
-                <div class="line-seperator" style="margin-left: 0; width: 260px; margin-bottom: 60px;"></div>
-                <div>
-                    <div class="horizontal-info-box">
-                        <i class="fas fa-building"></i>
-                        <div>
-                            <h4>Attractive Assets</h4>
-                            <p>An extensive portfolio of nationally branded stores located along major commerical corridors
-                                in a wide variety of Canadian communities. Proven to have limited cyclicality and lower volatility
-                                than the stock market.</p>
-                        </div>
+            <h2>A Tenant Driven Approach To Superior Investment Returns</h2>
+            <div id="counters">
+                <div class="counter">
+                    <div class="counter-inner">
+                        <span id="counter-1" class="counter-primary">$0 M</span>
+                        <span class="counter-secondary">Capital to be Raised</span>
                     </div>
-                    <div class="horizontal-info-box">
-                        <i class="fas fa-user-tie"></i>
-                        <div>
-                            <h4>Experienced Team</h4>
-                            <p>Access to deal flow from extensive network. Preferred developer status with serveral national
-                                brands with an ability to bid and acquire assets "off-market." Ground floor opportunity with
-                                a new fund from an experienced & distinguished team.</p>
-                        </div>
+                </div>
+                <div class="counter">
+                    <div class="counter-inner">
+                        <span id="counter-2" class="counter-primary">0%</span>
+                        <span class="counter-secondary">Annual Cash Distribution</span>
                     </div>
-                    <div class="horizontal-info-box">
-                        <i class="fas fa-briefcase"></i>
-                        <div>
-                            <h4>Strong Track Record</h4>
-                            <p>IRR of 20%+ for the historical portfolio. Growth in the NOI and rental footprint of 40% plus
-                                since 2012. 1.5% quarterly return plus a year-end top up. Targetted IRR of 12%.</p>
-                        </div>
+                </div>
+                <div class="counter">
+                    <div class="counter-inner">
+                        <span id="counter-3" class="counter-primary">0%</span>
+                        <span class="counter-secondary">Historical Total Return</span>
                     </div>
                 </div>
             </div>
-            <div></div>
+        </div>
+    </div>
+    <div id="about">
+        <svg style="top: 0;transform: translateY(calc(-100% + 1px)); position: absolute; width: 100%;" class="wave" version="1.1"
+            viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path d="M826.337463,25.5396311 C670.970254,58.655965 603.696181,68.7870267 447.802481,35.1443383 C293.342778,1.81111414 137.33377,1.81111414 0,1.81111414 L0,150 L1920,150 L1920,1.81111414 C1739.53523,-16.6853983 1679.86404,73.1607868 1389.7826,37.4859505 C1099.70117,1.81111414 981.704672,-7.57670281 826.337463,25.5396311 Z"
+                fill="#fff"></path>
+        </svg>
+        <div>
+            <div class="horizontal-info-box">
+                <i class="fas fa-building"></i>
+                <div>
+                    <h4>Attractive Assets</h4>
+                    <p>An extensive portfolio of nationally branded stores located along major commerical corridors in a wide
+                        variety of Canadian communities. Proven to have limited cyclicality and lower volatility than the
+                        stock market.</p>
+                </div>
+            </div>
+            <div class="horizontal-info-box">
+                <i class="fas fa-user-tie"></i>
+                <div>
+                    <h4>Experienced Team</h4>
+                    <p>Access to deal flow from extensive network. Preferred developer status with serveral national brands
+                        with an ability to bid and acquire assets "off-market." Ground floor opportunity with a new fund
+                        from an experienced & distinguished team.
+                    </p>
+                </div>
+            </div>
+            <div class="horizontal-info-box">
+                <i class="fas fa-briefcase"></i>
+                <div>
+                    <h4>Strong Track Record</h4>
+                    <p>IRR of 20%+ for the historical portfolio. Growth in the NOI and rental footprint of 40% plus since 2012.
+                        1.5% quarterly return plus a year-end top up. Targetted IRR of 12%.</p>
+                </div>
+            </div>
         </div>
     </div>
     <div id="meet-the-team">
@@ -169,7 +155,7 @@
             </a>
         </div>
         <div id="team-accordions" class="accordion-container">
-            <div class="accordion">
+            <div class="accordion accordion-light">
                 <h3>Daniel McClure</h3>
                 <div class="line-seperator-light"></div>
                 <p>Dan is a financial industry veteran, having spent 20 years in the capital markets. He has worked in a variety
@@ -183,7 +169,7 @@
                 <p>Dan is a graduate of Electrical Engineering from Queen’s University and has his Master of Business Administration
                     from the Ivey School of Business.​</p>
             </div>
-            <div class="accordion">
+            <div class="accordion accordion-light">
                 <h3>Charles Dyer</h3>
                 <div class="line-seperator-light"></div>
                 <p>A lifelong real estate professional, Charles began his career as a project engineer, gaining valuable experience
@@ -198,7 +184,7 @@
                     Charles holds a BSc in Civil Engineering from University of Waterloo and has his Master of Business Administration
                     from the DeGroote School of Business, McMaster University.​</p>
             </div>
-            <div class="accordion">
+            <div class="accordion accordion-light">
                 <h3>Roger Ferreira</h3>
                 <div class="line-seperator-light"></div>
                 <p>Roger Ferreira, is the CEO and founder of NAGC, one of the leading general contractors in the retail real
@@ -241,7 +227,7 @@
             </a>
         </div>
         <div id="case-studies-accordions" class="accordion-container">
-            <div class="accordion accordion-light">
+            <div class="accordion">
                 <h3>685 Queenston Road, Hamilton</h3>
                 <div class="line-seperator-light"></div>
                 <div class="case-study">
@@ -291,7 +277,7 @@
                     </div>
                 </div>
             </div>
-            <div class="accordion accordion-light">
+            <div class="accordion">
                 <h3>4 High Street, Collingwood</h3>
                 <div class="line-seperator-light"></div>
                 <div class="case-study">
@@ -342,7 +328,7 @@
                     </div>
                 </div>
             </div>
-            <div class="accordion accordion-light">
+            <div class="accordion">
                 <h3>480 Bayfield Street, Barrie</h3>
                 <div class="line-seperator-light"></div>
                 <div class="case-study">
@@ -458,14 +444,21 @@
         })
     </script>
     <script>
-        /*window.addEventListener('scroll', () => {
-            if (window.scrollY > 0) {
-                document.querySelector('header').classList.add('scrolled-header');
-            }
-            else {
-                document.querySelector('header').classList.remove('scrolled-header');
-            }
-        })*/
+        let count = 0;
+
+        counter = setInterval(() => {
+            if (count >= 30) clearInterval(counter);
+
+            let elem1 = document.getElementById("counter-1");
+            let elem2 = document.getElementById("counter-2");
+            let elem3 = document.getElementById("counter-3");
+
+            elem1.innerHTML = `$${count} M`;
+            if (count <= 6) elem2.innerHTML = `${count}%`;
+            if (count <= 20) elem3.innerHTML = `${count}%`;
+
+            count++;
+        }, 40);
 
         function toggleAccordion(container, childNum, e) {
             if (window.innerWidth > 800) e.preventDefault();
