@@ -497,6 +497,7 @@ nav ul>li>a:hover {
 .horizontal-info-box>div>p {
     color: #777;
     max-width: 500px;
+    line-height: 1.5em;
 }
 
 .horizontal-info-box h4 {
