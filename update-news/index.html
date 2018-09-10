@@ -72,7 +72,7 @@
                     this.$data.news.unshift(item);
                 },
                 saveItems: function () {
-                    fetch('https://virtuscapital.ca/update-news?token=' + getParameterByName('token'), {
+                    fetch('https://trivirtus.com/update-news?token=' + getParameterByName('token'), {
                         method: 'post', 
                         headers: {
                             'Accept': 'application/json, text/plain, */*',
@@ -87,13 +87,13 @@
                 submitImage: function () {
                     let formData = new FormData();
                     formData.append('file', document.querySelector('#file').files[0]);
-                    fetch('https://virtuscapital.ca/image-upload?token=' + getParameterByName('token'), {
+                    fetch('https://trivirtus.com/image-upload?token=' + getParameterByName('token'), {
                         method: 'POST', 
                         body: formData
                     }).then((res) => {
                         console.log(res);
                         if (res.ok == true) {
-                            alert('File successfully uploaded. The file can be found at https://virtuscapital.ca/uploads/' + document.querySelector('#file').files[0].name);
+                            alert('File successfully uploaded. The file can be found at https://trivirtus.com/uploads/' + document.querySelector('#file').files[0].name);
                             return;
                         }
                         alert('Upload failed. Check that your token is correct in the address bar (you can check by reloading). Otherwise, contact Liam.');
@@ -105,7 +105,7 @@
                 news: []
             },
             created() {
-                fetch('https://virtuscapital.ca/js/news.json')
+                fetch('https://trivirtus.com/js/news.json')
                     .then(res => res.json())
                     .then(res => this.$data.news = res);
             }
