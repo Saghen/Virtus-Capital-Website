@@ -834,4 +834,7 @@ nav ul>li>a:hover {
     #about>div {
         flex-direction: column;
     }
+    #contact-info {
+        align-items: center;
+    }
 }
