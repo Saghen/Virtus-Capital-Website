@@ -433,7 +433,7 @@ nav ul>li>a:hover {
     height: 250px;
     border-radius: 200px;
     border: 1px solid #fff;
-    margin-top: 20px;
+    margin: 20px;
 }
 
 .counter-inner {

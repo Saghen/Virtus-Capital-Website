@@ -1,2 +1,2 @@
 # Virtus-Capital-Website
-Development of the Virtus Capital website.
+Development of the Tri Virtus website.

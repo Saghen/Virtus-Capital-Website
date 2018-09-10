@@ -44,7 +44,7 @@ require('greenlock-express').create({
   , server: 'https://acme-v02.api.letsencrypt.org/directory'
   , configDir: '~/.config/acme/'
   , email: 'saghendev@gmail.com'
-  , approveDomains: [ 'virtuscapital.ca' ]
+  , approveDomains: [ 'trivirtus.com' ]
   , agreeTos: true
   , app: app
   , communityMember: false
