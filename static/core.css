@@ -318,10 +318,6 @@ nav ul>li>a::after {
     transition: 0.2s;
 }
 
-nav ul>li:last-child>a::after {
-    background: #8DC150;
-}
-
 nav ul>li>a:hover::after,
 nav ul>li>a.nav-selected::after {
     height: 2px;
@@ -398,6 +394,10 @@ nav ul>li>a:hover {
     font-weight: 400
 }
 
+#hero h1 .big {
+    font-size: 1.2em;
+}
+
 #hero h2 {
     font-size: 2em;
     font-weight: 100;
@@ -471,7 +471,109 @@ nav ul>li>a:hover {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-color: #fff;
+}
+
+/* WCU */
+
+#wcu {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    min-height: 800px;
     background-color: #eee;
+}
+
+#wcu-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#wcu-right {
+    position: relative;
+    background-color: #2d3c53;
+    padding: 20px;
+}
+
+#wcu-left video {
+    width: 100%;
+}
+
+#wcu-right::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(imgs/wcu-bg.png);
+    background-size: cover;
+    opacity: .1
+}
+
+#wcu-right>div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    min-height: 680px;
+    padding: 80px;
+    color: #fff
+}
+
+#wcu-right>div:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px #999 solid;
+    margin: 20px
+}
+
+@media only screen and (max-width:1400px) {
+    #wcu-right>div {
+        padding: 20px;
+    }
+}
+
+#wcu-right>div>h2 {
+    font-size: 2.5em;
+    font-weight: 400
+}
+
+#wcu-quote {
+    max-width: 600px;
+    margin: 40px auto 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+#wcu-quote>i {
+    font-size: 3em;
+    color: #bbb
+}
+
+#wcu-quote>span {
+    color: #333;
+    font-size: 1.4em;
+    letter-spacing: .1em;
+    font-style: italic;
+    margin-left: 20px
+}
+
+#wcu-left>p {
+    color: #999;
+    font-style: italic;
+    line-height: 1.7em;
+    font-size: 1.1em;
+    max-width: 600px;
+    margin-top: 40px;
+}
+
+#wcu .horizontal-info-box>div>p {
+    color: #ccc;
 }
 
 .horizontal-info-box {
@@ -564,7 +666,7 @@ nav ul>li>a:hover {
 }
 
 .accordion {
-    background-color: #ededed;
+    background-color: #eee;
     transition: 0.4s ease-in-out;
     height: 0;
     max-width: 1000px;
@@ -583,7 +685,7 @@ nav ul>li>a:hover {
 
 #case-studies {
     padding: 40px 40px 20px 40px;
-    background-color: #fff;
+    background-color: #eee;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -591,7 +693,7 @@ nav ul>li>a:hover {
 }
 
 #case-study-accordions {
-    margin-top: 40px
+    margin-top: 40px;
 }
 
 .accordion-header {
@@ -612,7 +714,23 @@ nav ul>li>a:hover {
     padding: 0 20px;
     transition: 0.4s;
     overflow: hidden;
-    background: #f7f7f7
+    background: #f7f7f7;
+}
+
+.partner img {
+    width: 300px;
+}
+
+.partner {
+    padding: 0 20px;
+    margin: 0 20px;
+}
+
+.partners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
 }
 
 .case-study {
@@ -719,7 +837,7 @@ nav ul>li>a:hover {
     display: flex;
     align-items: center;
     flex-direction: column;
-    background: #ededed;
+    background: #fff;
 }
 
 #news-container {
@@ -752,7 +870,7 @@ nav ul>li>a:hover {
 
 #contact {
     padding: 40px;
-    background-color: #fff;
+    background-color: #eee;
 }
 
 #contact-info {
@@ -784,22 +902,22 @@ nav ul>li>a:hover {
 
 @media only screen and (max-width:1000px) {
     #hero h1 {
-        font-size: 5em
+        font-size: 5em;
     }
     #hero>div>p {
-        display: none
+        display: none;
     }
     #hero>div>h2 {
         margin-bottom: 20px;
         font-size: 2em;
-        font-weight: 100
+        font-weight: 100;
     }
     .info-box-container {
         flex-direction: column;
-        align-items: center
+        align-items: center;
     }
     .info-box-container>*+* {
-        margin-top: 80px
+        margin-top: 80px;
     }
     #contact-info {
         flex-direction: column;
