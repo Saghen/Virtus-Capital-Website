@@ -958,5 +958,6 @@ nav ul>li>a:hover {
     }
     #about>div {
         flex-direction: column;
+        align-items: center;
     }
 }
