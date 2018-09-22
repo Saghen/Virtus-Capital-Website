@@ -723,14 +723,14 @@ nav ul>li>a:hover {
 
 .partner {
     padding: 0 20px;
-    margin: 0 20px;
+    margin: 20px;
 }
 
 .partners {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    margin: 0 20px;
 }
 
 .case-study {
@@ -925,6 +925,9 @@ nav ul>li>a:hover {
     }
     #wcu {
         grid-template-columns: 100%;
+    }
+    .partners {
+        flex-direction: column;
     }
 }
 
