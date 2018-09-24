@@ -480,7 +480,6 @@ nav ul>li>a:hover {
     display: grid;
     grid-template-columns: 50% 50%;
     width: 100%;
-    min-height: 800px;
     background-color: #eee;
 }
 
@@ -493,9 +492,15 @@ nav ul>li>a:hover {
 }
 
 #wcu-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: relative;
     background-color: #2d3c53;
-    padding: 20px;
+    padding: 60px;
+    color: #fff;
+    min-height: 300px;
 }
 
 #wcu-left video {
@@ -514,49 +519,32 @@ nav ul>li>a:hover {
     opacity: .1
 }
 
-#wcu-right>div:nth-child(1) {
-    display: flex;
-    flex-direction: column;
-    min-height: 680px;
-    padding: 80px;
-    color: #fff
-}
-
-#wcu-right>div:nth-child(2) {
+#wcu-right>div:last-child {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     border: 2px #999 solid;
-    margin: 20px
+    margin: 20px;
 }
 
-@media only screen and (max-width:1400px) {
-    #wcu-right>div {
-        padding: 20px;
-    }
-}
-
-#wcu-right>div>h2 {
-    font-size: 2.5em;
-    font-weight: 400
+#wcu-right p {
+    line-height: 1.2em;
 }
 
 #wcu-quote {
     max-width: 600px;
-    margin: 40px auto 0 auto;
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 #wcu-quote>i {
     font-size: 3em;
-    color: #bbb
 }
 
 #wcu-quote>span {
-    color: #333;
     font-size: 1.4em;
     letter-spacing: .1em;
     font-style: italic;
