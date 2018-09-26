@@ -61,20 +61,20 @@
             <div id="counters">
                 <div class="counter">
                     <div class="counter-inner">
-                        <span id="counter-1" class="counter-primary">$0 M</span>
-                        <span class="counter-secondary">Capital to be Raised</span>
-                    </div>
-                </div>
-                <div class="counter">
-                    <div class="counter-inner">
-                        <span id="counter-2" class="counter-primary">0%</span>
+                        <span id="counter-1" class="counter-primary">6%</span>
                         <span class="counter-secondary">Annual Cash Distribution</span>
                     </div>
                 </div>
                 <div class="counter">
                     <div class="counter-inner">
-                        <span id="counter-3" class="counter-primary">0%</span>
-                        <span class="counter-secondary">Historical Total Return</span>
+                        <span id="counter-2" class="counter-primary">12%</span>
+                        <span class="counter-secondary">Targeted Annual Return</span>
+                    </div>
+                </div>
+                <div class="counter">
+                    <div class="counter-inner">
+                        <span id="counter-3" class="counter-primary">20%</span>
+                        <span class="counter-secondary">Historical Annual Return</span>
                     </div>
                 </div>
             </div>
@@ -116,7 +116,6 @@
             <video id="player" muted loop autoplay playsinline>
                 <source src="drone.mp4" type="video/mp4">
             </video>
-            
         </div>
         <div id="wcu-right">
             <div id="wcu-quote">
@@ -489,21 +488,21 @@
         })
     </script>
     <script>
-        let count = 0;
+        /*let count = 0;
 
         counter = setInterval(() => {
-            if (count >= 30) clearInterval(counter);
+            if (count >= 100) clearInterval(counter);
 
             let elem1 = document.getElementById("counter-1");
             let elem2 = document.getElementById("counter-2");
             let elem3 = document.getElementById("counter-3");
 
-            elem1.innerHTML = `$${count} M`;
-            if (count <= 6) elem2.innerHTML = `${count}%`;
-            if (count <= 20) elem3.innerHTML = `${count}%`;
+            if (count <= 30) elem1.innerHTML = `${count/5}%`;
+            if (count <= 60) elem2.innerHTML = `${count/5}%`;
+            elem3.innerHTML = `${count/5}%`;
 
             count++;
-        }, 40);
+        }, 16);*/
 
         function toggleAccordion(container, childNum, e) {
             if (window.innerWidth > 800) e.preventDefault();
