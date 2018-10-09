@@ -40,8 +40,7 @@
     <div style="max-width: 1000px; margin: 120px auto 0 auto; padding: 0 20px;">
         <div id="news-container">
             <div class="news-item" v-show="show" v-for="item in news" style="height: auto; text-align: center;">
-                <h3 style="text-align: center;">{{ item.title }}</h3>
-                <p style="color: #555; margin-bottom: 0;">{{ item.summary }}</p>
+                <h2 style="text-align: center;">{{ item.title }}</h2>
                 <a :href="item.link" class="button" style="display: inline-block; align-self: center;">Learn More</a>
             </div>
             <div v-show="!show" class="news-item" style="margin-top: 40px; height: auto; width: auto; font-size:1.2em; padding: 60px;max-width: 400px; text-align: center;">
@@ -62,23 +61,19 @@
                 show: false,
                 news: [{
                     title: 'Disclaimer',
-                    summary: 'A disclaimer for the presentation found in the Investor Presentation.',
                     link: '../disclaimer/'
                 },
                 {
                     title: 'Term Sheet',
-                    summary: 'Coming soon.',
                     link: '../term-sheet/'
                 },
                 {
                     title: 'Subscription Document',
-                    summary: 'Coming soon.',
                     link: '../subscription-doc/'
                 },
                 {
                     title: 'Investor Presentation',
-                    summary: 'Coming soon.',
-                    link: '../investor-presentation/'
+                    link: '../Investor Presentation RE Fund.pdf'
                 },
                 ]
             }
