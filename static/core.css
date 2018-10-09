@@ -534,7 +534,7 @@ nav ul>li>a:hover {
 }
 
 #wcu-quote {
-    max-width: 600px;
+    font-size: 1.4em;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -799,6 +799,11 @@ nav ul>li>a:hover {
         height: 169px;
         margin-bottom: 20px
     }
+
+    #wcu-quote {
+        font-size: 1.1em;
+    }
+
     .case-study-imgs>div {
         padding: 20px 0;
         display: flex;
