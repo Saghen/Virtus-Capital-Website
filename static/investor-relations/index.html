@@ -1,93 +1,121 @@
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="robots" content="noindex">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="robots" content="noindex" />
     <title>Investor Relations - TriVirtus</title>
-    <link rel="icon" type="image/png" href="/imgs/favicon.png" />
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link rel="stylesheet" href="../core.css">
-</head>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#104378" />
+    <meta name="msapplication-TileColor" content="#2b5797" />
+    <meta name="theme-color" content="#ffffff" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../core.css" />
+  </head>
 
-<body style="position: relative;">
+  <body style="position: relative;">
     <header id="header" class="scrolled-header">
-        <nav>
-            <div id="logo">
-                <a href="../" style="text-decoration: none;">
-                    <img src="../imgs/logo.png" style="width: 110px;">
-                </a>
-            </div>
-            <ul>
-                <li>
-                    <a href="../">Home</a>
-                </li>
-                <li>
-                    <a href="../#meet-the-team">Team</a>
-                </li>
-                <li>
-                    <a href="../#news">News</a>
-                </li>
-                <li>
-                    <a href="../#contact">Contact</a>
-                </li>
-                <li>
-                    <a href="#" class="nav-selected">Investor Relations</a>
-                </li>
-            </ul>
-        </nav>
+      <nav>
+        <div id="logo">
+          <a href="../" style="text-decoration: none;">
+            <img src="../imgs/logo.png" style="width: 110px;" />
+          </a>
+        </div>
+        <ul>
+          <li>
+            <a href="../">Home</a>
+          </li>
+          <li>
+            <a href="../#meet-the-team">Team</a>
+          </li>
+          <li>
+            <a href="../#news">News</a>
+          </li>
+          <li>
+            <a href="../#contact">Contact</a>
+          </li>
+          <li>
+            <a href="#" class="nav-selected">Investor Relations</a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <div style="max-width: 1000px; margin: 120px auto 0 auto; padding: 0 20px;">
-        <div id="news-container">
-            <div class="news-item" v-show="show" v-for="item in news" style="height: auto; text-align: center;">
-                <h2 style="text-align: center;">{{ item.title }}</h2>
-                <a :href="item.link" class="button" style="display: inline-block; align-self: center;">Learn More</a>
-            </div>
-            <div v-show="!show" class="news-item" style="margin-top: 40px; height: auto; width: auto; font-size:1.2em; padding: 60px;max-width: 400px; text-align: center;">
-                <p style="margin-top:0;">The TriViritus Real Estate Investment Fund is limited to accredited investors. Please confirm that you are an accredited investor as defined by National Instrument 45-106.</p>
-                <div class="line-seperator-light" style="margin: 20px auto;"></div>
-                <div style="display: flex; flex-direction: column; justify-content: center; text-align: center;">
-                    <a href="#" v-on:click.prevent="show = true" class="button">Yes</a>
-                    <a href="../" class="button" style="margin-top: 20px;">No</a>
-                </div>
-            </div>
+      <div id="news-container">
+        <div
+          class="news-item"
+          v-show="show"
+          v-for="item in news"
+          style="height: auto; text-align: center;"
+        >
+          <h2 style="text-align: center;">{{ item.title }}</h2>
+          <a
+            :href="item.link"
+            class="button"
+            style="display: inline-block; align-self: center;"
+            >Learn More</a
+          >
         </div>
+        <div
+          v-show="!show"
+          class="news-item"
+          style="margin-top: 40px; height: auto; width: auto; font-size:1.2em; padding: 60px;max-width: 400px; text-align: center;"
+        >
+          <p style="margin-top:0;">
+            The TriViritus Real Estate Investment Fund is limited to accredited
+            investors. Please confirm that you are an accredited investor as
+            defined by National Instrument 45-106.
+          </p>
+          <div class="line-seperator-light" style="margin: 20px auto;"></div>
+          <div
+            style="display: flex; flex-direction: column; justify-content: center; text-align: center;"
+          >
+            <a href="#" v-on:click.prevent="show = true" class="button">Yes</a>
+            <a href="../" class="button" style="margin-top: 20px;">No</a>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script>
-        let app = new Vue({
-            el: '#news-container',
-            data: {
-                show: false,
-                news: [{
-                    title: 'Disclaimer',
-                    link: '../Disclaimer.pdf'
-                },
-                {
-                    title: 'Term Sheet',
-                    link: '../Term Sheet.pdf'
-                },
-                {
-                    title: 'Subscription Document',
-                    link: '../Subscription Document.pdf'
-                },
-                {
-                    title: 'Investor Presentation',
-                    link: '../Investor Presentation.pdf'
-                },
-                {
-                    title: 'Privacy Policy',
-                    link: '#'
-                },
-                {
-                    title: 'Terms of Use',
-                    link: '#'
-                },
-                ]
+      let app = new Vue({
+        el: "#news-container",
+        data: {
+          show: false,
+          news: [
+            {
+              title: "Disclaimer",
+              link: "../Disclaimer.pdf"
+            },
+            {
+              title: "Term Sheet",
+              link: "../Term Sheet.pdf"
+            },
+            {
+              title: "Subscription Document",
+              link: "../Subscription Document.pdf"
+            },
+            {
+              title: "Investor Presentation",
+              link: "../Investor Presentation.pdf"
+            },
+            {
+              title: "Privacy Policy",
+              link: "#"
+            },
+            {
+              title: "Terms of Use",
+              link: "#"
             }
-        });
+          ]
+        }
+      });
     </script>
-</body>
-
+  </body>
 </html>
