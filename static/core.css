@@ -424,6 +424,17 @@ nav ul > li > a:hover {
   border-color: #fff;
 }
 
+.hero--logo-detail {
+  position: relative;
+}
+
+.hero--logo-detail > img {
+  width: 180px;
+  position: absolute;
+  bottom: 90%;
+  right: 0;
+}
+
 #counters {
   display: flex;
   align-items: center;
@@ -904,7 +915,10 @@ nav ul > li > a:hover {
   align-items: center;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 800px) {
+  .hero--logo-detail > img {
+    display: none
+  }
   #hero h1 {
     font-size: 5em;
   }
