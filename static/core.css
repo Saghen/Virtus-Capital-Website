@@ -192,6 +192,11 @@ template {
 }
 
 @font-face {
+  font-family: "Nimbus Roman";
+  src: url(./fonts/nimbusroman.otf);
+}
+
+@font-face {
   font-family: "Lato";
   font-style: normal;
   font-weight: 400;
@@ -402,7 +407,7 @@ nav ul > li > a:hover {
 }
 
 #hero h1 .big {
-  font-size: 1.7em;
+  font-size: 1.3em;
 }
 
 #hero h2 {
@@ -429,10 +434,10 @@ nav ul > li > a:hover {
 }
 
 .hero--logo-detail > img {
-  width: 180px;
+  width: 150px;
   position: absolute;
-  bottom: 90%;
-  right: 0;
+  bottom: 100%;
+  right: 20px;
 }
 
 #counters {
