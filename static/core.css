@@ -436,7 +436,7 @@ nav ul > li > a:hover {
 .hero--logo-detail > img {
   width: 150px;
   position: absolute;
-  bottom: 100%;
+  bottom: 120px;
   right: 20px;
 }
 
