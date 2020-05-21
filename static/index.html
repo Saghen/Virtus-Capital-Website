@@ -88,9 +88,14 @@
     <div id="hero">
       <div>
         <h1
-          style="color: #fff; text-shadow: 1px 1px #444; font-family: 'Nimbus Roman', Galatia, serif; line-height: 1em;"
+          style="
+            color: #fff;
+            text-shadow: 1px 1px #444;
+            font-family: 'Nimbus Roman', Galatia, serif;
+            line-height: 1em;
+          "
         >
-          <span class="big">T</span>RI<wbr /> <span class="big">V</span>IRT<span
+          <span class="big">T</span>RI<wbr /><span class="big">V</span>IRT<span
             class="hero--logo-detail"
             >US<img src="imgs/logo-detail.svg"
           /></span>
@@ -125,7 +130,12 @@
     </div>
     <div id="about">
       <svg
-        style="top: 0;transform: translateY(calc(-100% + 1px)); position: absolute; width: 100%;"
+        style="
+          top: 0;
+          transform: translateY(calc(-100% + 1px));
+          position: absolute;
+          width: 100%;
+        "
         class="wave"
         version="1.1"
         viewBox="0 0 1440 100"
@@ -204,7 +214,7 @@
         >
           <div
             class="info-box-alt"
-            style="background-image: url(imgs/mtt-daniel.jpg)"
+            style="background-image: url(imgs/mtt-daniel.jpg);"
           >
             <div class="info-box-alt-info">
               <span>Daniel McClure</span>
@@ -219,7 +229,7 @@
         >
           <div
             class="info-box-alt"
-            style="background-image: url(imgs/mtt-charles.jpg)"
+            style="background-image: url(imgs/mtt-charles.jpg);"
           >
             <div class="info-box-alt-info">
               <span>Charles Dyer</span>
@@ -234,7 +244,7 @@
         >
           <div
             class="info-box-alt"
-            style="background-image: url(imgs/mtt-roger.jpg)"
+            style="background-image: url(imgs/mtt-roger.jpg);"
           >
             <div class="info-box-alt-info">
               <span>Roger Ferreira</span>
@@ -333,7 +343,7 @@
       </div>
     </div>
     <div id="case-studies">
-      <h2>Case Studies</h2>
+      <h2>Recent Projects</h2>
       <div class="line-seperator-light"></div>
       <div
         class="info-box-container-alt info-box-container"
@@ -345,7 +355,7 @@
         >
           <div
             class="info-box-alt info-box-alt-wide"
-            style="background-image: url(imgs/cs_1.png)"
+            style="background-image: url(imgs/cs_1.png);"
           >
             <div class="info-box-alt-info">
               <span>685 Queenston Road, Hamilton</span>
@@ -358,7 +368,7 @@
         >
           <div
             class="info-box-alt info-box-alt-wide"
-            style="background-image: url(imgs/cs_3.png)"
+            style="background-image: url(imgs/cs_3.png);"
           >
             <div class="info-box-alt-info">
               <span>4 High Street, Collingwood</span>
@@ -371,7 +381,7 @@
         >
           <div
             class="info-box-alt info-box-alt-wide"
-            style="background-image: url(imgs/cs_2.png)"
+            style="background-image: url(imgs/cs_2.png);"
           >
             <div class="info-box-alt-info">
               <span>480 Bayfield Street, Barrie</span>
@@ -574,7 +584,12 @@
           <img
             :src="item.img"
             alt="News Image"
-            style="width: 320px; height: 180px; object-fit: cover; background-color: #ccc;"
+            style="
+              width: 320px;
+              height: 180px;
+              object-fit: cover;
+              background-color: #ccc;
+            "
           />
           <h3>{{ item.title }}</h3>
           <span>{{ item.date }}</span>
@@ -587,10 +602,10 @@
       <div id="contact-info">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.9990140600485!2d-79.63121318421993!3d43.627379462117496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b38a1c9164f1b%3A0xaadb4b9385cab2!2s1018+Eglinton+Ave+E+%235%2C+Mississauga%2C+ON+L4W+1K3!5e0!3m2!1sen!2sca!4v1532014991757"
-          style="max-width:600px; width:100%;margin-bottom: 20px;"
+          style="max-width: 600px; width: 100%; margin-bottom: 20px;"
           height="450"
           frameborder="0"
-          style="border:0"
+          style="border: 0;"
         ></iframe>
         <div>
           <span>
@@ -616,27 +631,27 @@
               title: "News Coming Soon",
               date: "July 16, 2018",
               img: "./imgs/coming_soon.jpg",
-              link: "#"
+              link: "#",
             },
             {
               title: "News Coming Soon",
               date: "July 16, 2018",
               img: "./imgs/coming_soon.jpg",
-              link: "#"
+              link: "#",
             },
             {
               title: "News Coming Soon",
               date: "July 16, 2018",
               img: "./imgs/coming_soon.jpg",
-              link: "#"
-            }
-          ]
+              link: "#",
+            },
+          ],
         },
         created() {
           fetch("https://trivirtus.com/js/news.json")
-            .then(res => res.json())
-            .then(res => (this.$data.news = res));
-        }
+            .then((res) => res.json())
+            .then((res) => (this.$data.news = res));
+        },
       });
     </script>
     <script>
@@ -691,7 +706,7 @@
       window.addEventListener("resize", () => {
         let containers = [
           document.querySelector("#team-accordions"),
-          document.querySelector("#case-studies-accordions")
+          document.querySelector("#case-studies-accordions"),
         ];
         for (let container of containers) {
           for (let item of [].slice.call(container.children)) {
